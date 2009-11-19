@@ -1,0 +1,47 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "wet_h", "wet_h.vcproj", "{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupModel", "SetupModel\SetupModel.vdproj", "{391234BD-DC51-433A-9BFA-37524EA5D087}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB} = {CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		CanCheckoutShared = true
+		SolutionUniqueID = {C6C5BBCC-9AA3-4C5A-9FBD-5CA96246BD0F}
+		SccProjectUniqueName1 = wet_h.vcproj
+		SccLocalPath1 = .
+		CanCheckoutShared = true
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug-matt = Debug-matt
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}.Debug.ActiveCfg = Debug|Win32
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}.Debug.Build.0 = Debug|Win32
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}.Debug-matt.ActiveCfg = Debug-matt|Win32
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}.Debug-matt.Build.0 = Debug-matt|Win32
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}.Release.ActiveCfg = Release|Win32
+		{CCD8D44C-7B4A-4BAC-8805-F1005F5E9DFB}.Release.Build.0 = Release|Win32
+		{391234BD-DC51-433A-9BFA-37524EA5D087}.Debug.ActiveCfg = Debug
+		{391234BD-DC51-433A-9BFA-37524EA5D087}.Debug-matt.ActiveCfg = Debug
+		{391234BD-DC51-433A-9BFA-37524EA5D087}.Release.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionItems) = postSolution
+		C4DLL.DLL = C4DLL.DLL
+		C4DLL.LIB = C4DLL.LIB
+		C4WIN.LIB = C4WIN.LIB
+		libcimtd.lib = libcimtd.lib
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

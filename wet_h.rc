@@ -1,0 +1,2049 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\wet_h.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\wet_h.ico"
+IDR_WET_HTYPE           ICON                    "res\\wet_hDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDR_MAPTOOLBAR          BITMAP                  "res\\toolbar1.bmp"
+IDB_CHECK               BITMAP                  "bitmap_s.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  15, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_ZOOMIN
+    BUTTON      ID_ZOOMOUT
+    BUTTON      ID_ZOOMFULL
+    SEPARATOR
+    BUTTON      ID_PAN
+    SEPARATOR
+    BUTTON      ID_QUERYDISTANCE
+    SEPARATOR
+    BUTTON      ID_DBTABLE
+    SEPARATOR
+    BUTTON      ID_ANALYSIS_RUNMODEL
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_STATISTICS
+    BUTTON      ID_APP_STOP
+    BUTTON      ID_CALCFPDIST
+    BUTTON      ID_APP_MODELDEFINITION
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Read Ini Files...\tCtrl+O",  ID_FILE_OPEN
+        MENUITEM "Open Ascii Grid",             ID_Menu
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM "Save Parameters",             ID_FILE_SAVEPARAMETERS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Close",                       ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+    POPUP "Model Analysis"
+    BEGIN
+        MENUITEM "General Model Setup",         ID_MODELANALYSIS_USERINTERACTION
+
+        MENUITEM "Define Hydro Model",          ID_MODELANALYSIS_DEFINEHYDROLOGYMODEL
+
+        MENUITEM "Evaluate the Hydro Model",    ID_MODELANALYSIS_MODELEVALUATION
+
+        MENUITEM SEPARATOR
+        MENUITEM "Extensions",                  ID_MODELANALYSIS_PESTICIDEMODEL
+
+        MENUITEM "Restoration Sensitivity",     ID_MODELANALYSIS_RESTORATIONSENSITIVITY
+
+        MENUITEM "Generate Report",             ID_MODELANALYSIS_GENERATEREPORT
+
+        MENUITEM SEPARATOR
+        MENUITEM "Run the Model",               ID_MODELANALYSIS_RUNMODEL
+        MENUITEM "Allocate Hillslope Model",    ID_MODELANALYSIS_RUNHILLSLOPEMODEL
+
+        MENUITEM "Edit Tabular Data",           ID_MODELANALYSIS_EDITTABULARDATA
+
+        MENUITEM "Save Model State",            ID_MODELANALYSIS_SAVEMODELSTATE
+
+    END
+    POPUP "Topographic Calculation"
+    BEGIN
+        MENUITEM "Mean SubBasin Flowpath Length", 
+                                                ID_TOPOGRAPHICCALCULATION_MEANWATERSHEDELEVATION
+
+        MENUITEM "Complete SubBasin FP Distribution", 
+                                                ID_TOPOGRAPHICCALCULATION_SUBBASINFPDISTRIBUTION
+
+        MENUITEM "SubBasin Distance to DS Outlet Distribution", 
+                                                ID_TOPOGRAPHICCALCULATION_SUBBASINDISTANCETODSOUTLETDISTRIBUTION
+
+        MENUITEM "Distance from Poly to Stream", 
+                                                ID_TOPOGRAPHICCALCULATION_DISTANCEFROMPOLYTOSTREAM
+
+        MENUITEM "Calculate Upstream Area",     ID_TOPOGRAPHICCALCULATION_CALCULATEUPSTREAMAREA
+
+        MENUITEM "Side of stream ",             ID_TOPOGRAPHICCALCULATION_SIDEOFSTREAM
+
+        MENUITEM "Dist to Stream (as a grid)",  ID_TOPOGRAPHICCALCULATION_DISTTOSTREAM
+
+        MENUITEM "Willamette Q Movie (very specific...)", 
+                                                ID_TOPOGRAPHICCALCULATION_WILLAMETTEQMOVIE
+
+        MENUITEM "Dis Gradient and quotient for grid", 
+                                                ID_TOPOGRAPHICCALCULATION_DISGRADIENTANDQUOTIENTFORGRID
+
+    END
+    POPUP "Additional Stuff"
+    BEGIN
+        MENUITEM "Load UA Radar",               ID_ADDITIONALSTUFF_LOADUARADAR
+
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About wet_h...",             ID_APP_ABOUT
+    END
+END
+
+IDR_MAPCONTEXTMENU MENU 
+BEGIN
+    POPUP "Properties"
+    BEGIN
+        MENUITEM "Properties for this Site",    ID_CELLPROPERTIES
+        MENUITEM "Clear Alternatives",          ID_CLEARALTERNATIVES
+        MENUITEM "Select Watershed",            ID_SELECTWATERSHED
+        MENUITEM "Reclassify Data",             ID_RECLASSIFYDATA
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_ANALYSIS_RUNMODEL,   VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About wet_h"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "wet_h Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2001",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    CONTROL         "",IDC_CONTROL1,"{92D71E93-25A8-11CF-A640-9986B64D9618}",
+                    WS_TABSTOP,105,23,60,25
+END
+
+IDD_CELLPROPERTIES1 DIALOG  0, 0, 172, 295
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "cell properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Flash Cell",IDC_FLASHCELL,19,270,52,15
+    PUSHBUTTON      "<<",IDC_PREVCELL,99,264,23,21
+    PUSHBUTTON      ">>",IDC_NEXTCELL,135,266,21,19
+END
+
+IDD_MAPLAYERPROPS DIALOG  0, 0, 302, 183
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Map Layer Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,245,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,245,24,50,14
+    RTEXT           "Layer Name:",IDC_STATIC,11,10,40,8
+    EDITTEXT        IDC_LAYERNAME,54,8,178,14,ES_AUTOHSCROLL
+    RTEXT           "File:",IDC_STATIC,11,28,39,8
+    EDITTEXT        IDC_FILE,54,26,178,14,ES_AUTOHSCROLL
+    RTEXT           "Type:",IDC_STATIC,30,48,19,8
+    LTEXT           "Static",IDC_TYPE,55,48,177,8
+    RTEXT           "#Features:",IDC_STATIC,15,60,33,8
+    LTEXT           "Static",IDC_FEATURES,55,60,177,8
+    CONTROL         "Visible",IDC_VISIBLE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,18,82,37,10
+    CONTROL         "Show polygon outlines",IDC_SHOWOUTLINES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,18,96,83,10
+    CONTROL         "Slider1",IDC_INTENSITY,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_TOP | WS_TABSTOP,159,92,100,22
+    LTEXT           "Intensity:",IDC_INTENSITYTEXT,133,96,25,9
+    LTEXT           "Lighter",IDC_LIGHTER,158,84,21,8
+    RTEXT           "Darker",IDC_DARKER,235,83,22,8
+    GROUPBOX        "Colors...",IDC_STATIC,17,126,261,36
+    LTEXT           "Outline:",IDC_STATIC,28,141,23,8
+    CONTROL         "",IDC_OUTLINECOLOR,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    54,138,67,17
+END
+
+IDD_MAPSTATS DIALOG  0, 0, 338, 93
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Map Statistics"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,279,12,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,279,29,50,14
+    GROUPBOX        "Basic Stats...",IDC_STATIC,7,8,268,68
+    RTEXT           "Total Area:",IDC_STATIC,32,27,46,8
+    EDITTEXT        IDC_TOTALAREA,82,25,40,13,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "km2",IDC_STATIC,125,27,14,8
+    RTEXT           "Total Restored Area:",IDC_STATIC,11,44,67,8
+    EDITTEXT        IDC_RESTOREDAREA,82,42,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "km2",IDC_STATIC,125,44,14,8
+    RTEXT           "Total Cells:",IDC_STATIC,176,27,46,8
+    EDITTEXT        IDC_TOTALCELLS,226,25,40,13,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Total Restored Cells:",IDC_STATIC,155,44,67,8
+    EDITTEXT        IDC_RESTOREDCELLS,226,42,40,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+IDD_SAVERESULTS DIALOG  0, 0, 186, 54
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save The Results?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Yes",IDOK,129,7,50,14
+    PUSHBUTTON      "No",IDCLOSE,129,24,50,14
+    LTEXT           "Save the results of this model run to the Result Plot Tab?",
+                    IDC_STATIC,13,13,114,24
+END
+
+IDD_OPTIMIZE DIALOG  0, 0, 629, 402
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Parameter Optimization"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,553,372,50,14
+    LTEXT           "Parameter",IDC_STATIC,46,31,33,8
+    LTEXT           "Min",IDC_STATIC,94,31,12,8
+    LTEXT           "Max",IDC_STATIC,125,31,14,8
+    LTEXT           "Initial",IDC_STATIC,159,31,17,8
+    EDITTEXT        IDC_MINM,91,47,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXM,124,47,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_M,158,47,32,15,ES_AUTOHSCROLL
+    GROUPBOX        "",IDC_STATIC,13,6,609,364
+    EDITTEXT        IDC_MINIS,90,65,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXIS,124,65,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IS,158,65,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINN,90,82,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXN,124,82,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N,158,82,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINKS,91,101,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXKS,124,101,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KS,158,101,32,15,ES_AUTOHSCROLL
+    CONTROL         "m",IDC_CHECKM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,41,
+                    48,41,9
+    CONTROL         "Init % Sat.",IDC_CHECKIPS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,41,64,44,14
+    CONTROL         "stream n",IDC_CHECKN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,41,82,46,14
+    CONTROL         "Ksat",IDC_CHECKKSAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,98,38,14
+    EDITTEXT        IDC_OPTLENGTH,315,56,33,14,ES_AUTOHSCROLL
+    LTEXT           "Optimization length (days)",IDC_STATIC,233,57,76,19
+    EDITTEXT        IDC_OPTTIMESTEP,315,81,34,15,ES_AUTOHSCROLL
+    LTEXT           "Optimization Time Step",IDC_OPTTIME,234,84,75,13
+    PUSHBUTTON      "Optimize",IDC_OPT,151,371,51,15
+    LTEXT           "Time to Calculate Initial Conditions",IDC_STATIC,231,34,
+                    79,18
+    EDITTEXT        IDC_ICLENGTH,315,34,33,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINSOILDEPTH,90,119,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXSOILDEPTH,124,119,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SOILDEPTH,158,119,32,15,ES_AUTOHSCROLL
+    CONTROL         "Soil Depth",IDC_CHECKSOILDEPTH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,40,119,48,14
+    EDITTEXT        IDC_MINKDEPTH,91,138,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXKDEPTH,124,138,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_KDEPTH,158,138,32,15,ES_AUTOHSCROLL
+    CONTROL         "K Depth",IDC_CHECKKDDEPTH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,41,138,38,14
+    EDITTEXT        IDC_MINET,91,158,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MAXET,124,158,32,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ET,158,158,32,15,ES_AUTOHSCROLL
+    CONTROL         "ET ",IDC_CHECKET,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    41,158,38,14
+    LTEXT           "Calculations",IDC_PROGRESSBOX,421,21,201,164,WS_BORDER
+    GROUPBOX        "Input Values",IDC_STATIC,14,14,357,159
+    EDITTEXT        IDC_LAMDA,315,100,34,15,ES_AUTOHSCROLL
+    LTEXT           "Initial Lamda",IDC_OPTTIME2,233,103,75,13
+    EDITTEXT        IDC_LAMDAFACTOR,315,118,34,15,ES_AUTOHSCROLL
+    LTEXT           "Lamda change factor",IDC_OPTTIME3,233,121,75,13
+    PUSHBUTTON      "Run Model",IDC_RUN,442,380,51,15
+    CONTROL         "",IDC_2DCHART,"{92D71E93-25A8-11CF-A640-9986B64D9618}",
+                    WS_TABSTOP,13,186,584,183
+    PUSHBUTTON      "Other Output",IDC_OTHEROUTPUT,499,380,51,15
+    CONTROL         "Use Initial Estimates in a Simulation Study",
+                    IDC_CHECKSIMULATIONSTUDY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,201,141,149,14
+    EDITTEXT        IDC_PERTURBPERCENT,315,153,34,15,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE | WS_GROUP
+    PUSHBUTTON      "Reset the Optimization",IDCANCEL2,352,380,85,15
+END
+
+IDD_3DCHART DIALOG  0, 0, 529, 311
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,472,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,472,24,50,14
+    CONTROL         "",IDC_3DCHART,"{CA888F03-45F5-11CF-80B2-0020AF19EE14}",
+                    WS_TABSTOP,7,7,456,297
+END
+
+IDD_PROPPAGE_MODELINTERACTION DIALOG  0, 0, 223, 226
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Model Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_DELTAX,131,22,35,15,ES_AUTOHSCROLL
+    LTEXT           "DeltaX",IDC_STATIC,133,14,22,8
+    EDITTEXT        IDC_WDRATIO,131,49,34,14,ES_AUTOHSCROLL
+    LTEXT           "w/d",IDC_STATIC,131,39,31,9
+    EDITTEXT        IDC_M,132,73,34,14,ES_AUTOHSCROLL
+    LTEXT           "m",IDC_STATIC,131,62,31,9
+    EDITTEXT        IDC_KSAT,131,96,34,14,ES_AUTOHSCROLL
+    LTEXT           "kSat",IDC_STATIC,131,87,31,9
+    EDITTEXT        IDC_IS,19,87,34,14,ES_AUTOHSCROLL
+    LTEXT           "Initial Sat",IDC_STATIC,18,76,31,9
+    EDITTEXT        IDC_N,20,23,34,14,ES_AUTOHSCROLL
+    LTEXT           "n",IDC_STATIC,20,13,31,9
+    EDITTEXT        IDC_SOILDEPTH,20,52,34,14,ES_AUTOHSCROLL
+    LTEXT           "soildepth",IDC_STATIC,20,42,31,9
+    CONTROL         "Use a Constant Ksat",IDC_KSATASPARAM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,133,114,83,10
+    CONTROL         "Use a Constant Soil Depth",IDC_SDASPARAM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,66,97,10
+    EDITTEXT        IDC_LTPRECIP,17,111,34,14,ES_AUTOHSCROLL
+    LTEXT           "LtPrecip at Climate Station (m)",IDC_STATIC,16,102,95,9
+    CONTROL         "Adjust Precip based on PRISM",IDC_CHECKPRISM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,127,119,10
+    LTEXT           "phi",IDC_STATIC,101,140,31,9
+    CONTROL         "Use Soil Type from list",IDC_CHECKUSESOILLIST,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,152,83,10
+    EDITTEXT        IDC_PHI,104,151,29,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITNUMITERAT,171,190,26,13,ES_AUTOHSCROLL
+    LTEXT           "Number of Iterations",IDC_STATIC,130,190,36,15
+    GROUPBOX        "Optimization",IDC_STATIC,7,163,209,56
+    CONTROL         "Run Monte-Carlo",IDC_CHECKMONTE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,21,190,75,10
+    LTEXT           "Check this box to randomly generate parameters and run the model.  Above values will be treated as maximums",
+                    IDC_STATIC,14,171,181,20
+    PUSHBUTTON      "Other Sampling Parameters",IDC_BUTTONMCADDITIONAL,19,
+                    203,93,10
+    CONTROL         "3 gauged basins",IDC_CHECKTHREEGAGES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,131,207,78,10
+    EDITTEXT        IDC_KDEPTH,158,143,34,14,ES_AUTOHSCROLL
+    LTEXT           "kDepth",IDC_STATIC,158,134,31,9
+END
+
+IDD_ClassifyLayerDlg DIALOG  0, 0, 249, 255
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Classify Layer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "General",IDC_STATIC,7,7,182,122
+    RTEXT           "Color Ramp:",IDC_STATIC,27,28,39,8
+    COMBOBOX        IDC_COLORRAMP,67,27,108,98,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "Classify on:",IDC_STATIC,29,46,35,8
+    COMBOBOX        IDC_DATAFIELD,67,45,109,121,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Number of Bins:",IDC_STATIC,15,89,57,8
+    CONTROL         "Use Unique Values",IDC_UNIQUEVALUES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,113,87,76,10
+    PUSHBUTTON      "Generate Bins based on information above",
+                    IDC_GENERATEBINS,16,109,167,14
+    GROUPBOX        "Bin Details...",IDC_STATIC,7,137,235,102
+    CONTROL         "List1",IDC_BINLIST,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_EDITLABELS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,15,148,221,87
+    DEFPUSHBUTTON   "OK",IDOK,192,11,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,192,28,50,14
+    RTEXT           "Field Type:",IDC_STATIC,68,60,35,8
+    LTEXT           "unknown",IDC_FIELDTYPE,107,60,68,8
+    EDITTEXT        IDC_BINCOUNT,72,87,25,14,ES_AUTOHSCROLL
+    CONTROL         "Spin5",IDC_SPINBUTTON,"msctls_updown32",UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,97,87,10,14
+END
+
+IDD_PROPPAGE_INTERFACEINTERACTION DIALOGEX 0, 0, 254, 215
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Mapping Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_MINQ,15,24,34,12,ES_AUTOHSCROLL
+    LTEXT           "Minimum Expected Value",IDC_STATIC,13,15,91,9
+    EDITTEXT        IDC_MAXQ,15,46,34,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum Expected Value",IDC_STATIC,15,37,90,9
+    EDITTEXT        IDC_NUMBIN,15,69,34,12,ES_AUTOHSCROLL
+    LTEXT           "Number of Bins",IDC_STATIC,15,59,74,9
+    CONTROL         "Update Stream during Run?",IDC_CHECKUPDATESTREAM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,189,102,10
+    EDITTEXT        IDC_WIDTHLINE,14,92,34,12,ES_AUTOHSCROLL
+    LTEXT           "Width (pixels) of largest Lines",IDC_STATIC,13,82,74,9
+    EDITTEXT        IDC_COLLECTIONINT,118,149,56,12,ES_AUTOHSCROLL
+    LTEXT           "Collection Interval (Days)",IDC_STATIC,117,139,81,9
+    CONTROL         "Update Upland during Run?",IDC_CHECKUPDATEUPLAND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,198,105,10
+    GROUPBOX        "Upland Classification",IDC_STATIC,116,7,105,130
+    EDITTEXT        IDC_UPMIN,125,25,34,12,ES_AUTOHSCROLL
+    LTEXT           "Minimum Expected Value",IDC_STATIC,121,16,83,9
+    EDITTEXT        IDC_UPMAX,125,46,34,12,ES_AUTOHSCROLL
+    LTEXT           "Maximum Expected Value",IDC_STATIC,146,38,101,9
+    EDITTEXT        IDC_UPNUMBIN,125,67,34,12,ES_AUTOHSCROLL
+    LTEXT           "Number of Bins",IDC_STATIC,124,59,74,9
+    GROUPBOX        "Stream Classification",IDC_STATIC,7,7,106,159
+    GROUPBOX        "Classify",IDC_STATIC,120,81,98,52,WS_TABSTOP
+    CONTROL         "SWC",IDC_RADIOSWC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,124,91,33,10
+    CONTROL         "Degree of Saturation",IDC_RADIODEGSAT,"Button",
+                    BS_AUTORADIOBUTTON,124,100,81,10
+    CONTROL         "Depth to Sat. Zone (m)",IDC_RADIODEPSAT,"Button",
+                    BS_AUTORADIOBUTTON,124,110,88,10
+    CONTROL         "Evapotranspiration (m/d)",IDC_RADIOET,"Button",
+                    BS_AUTORADIOBUTTON,124,120,93,10
+    CONTROL         "Discharge (m3/s)",IDC_RADIOQ,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,23,112,71,9
+    CONTROL         "Velocity (m/s)",IDC_RADIOVEL,"Button",
+                    BS_AUTORADIOBUTTON,23,123,74,8
+    CONTROL         "Depth (m)",IDC_RADIODEP,"Button",BS_AUTORADIOBUTTON,23,
+                    133,76,8
+    CONTROL         "Wave Celerity (m/s)",IDC_RADIOCEL,"Button",
+                    BS_AUTORADIOBUTTON,23,142,79,8
+    CONTROL         "Top Width (m)",IDC_RADIOWID,"Button",BS_AUTORADIOBUTTON,
+                    23,151,73,8
+    GROUPBOX        "Classify",IDC_STATIC,13,104,94,59,WS_TABSTOP
+    CONTROL         "Calc. Mass Balance",IDC_CHECKUPDATECLASSEXTENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,118,188,104,10
+    CONTROL         "Save as Movie?",IDC_SAVEEMFOUT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,119,198,100,10
+    EDITTEXT        IDC_COLLECTIONINT2,120,174,56,12,ES_AUTOHSCROLL
+    LTEXT           "Spin Up Period (Days)",IDC_STATIC,119,164,81,9
+END
+
+IDD_PROPPAGE_MODELSTRUCTURE DIALOGEX 0, 0, 212, 178
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Model Structure Definition"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,13,4,183,124
+    CONTROL         "Simulate each Watershed",IDC_RADIOWATERSHED,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,20,13,101,8
+    CONTROL         "Hillslope/Riparian",IDC_RADIOCELL,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,20,25,87,8
+    CONTROL         "Simulate Unsaturated Zone",IDC_CHECKUNSATURATED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,127,103,13
+    CONTROL         "Include a Tile Drainage Box",IDC_CHECKTILEDRAINAGE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,138,103,13
+    CONTROL         "Distribute Upland Calculations",IDC_RADIODISTIBUTE,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,19,37,170,8
+    EDITTEXT        IDC_DISTBAND,136,53,43,12,ES_AUTOHSCROLL | NOT 
+                    WS_VISIBLE
+    LTEXT           "Distance Band Width",IDC_STATIC,64,53,69,10,NOT 
+                    WS_VISIBLE
+    EDITTEXT        IDC_NUMBANDS,135,66,43,12,ES_AUTOHSCROLL
+    LTEXT           "Number of Bands in each watershed",IDC_STATIC,15,67,121,
+                    10
+    GROUPBOX        "",IDC_STATIC,56,79,128,43
+    CONTROL         "Centroid Flow Path Distance",IDC_RADIOCENTROID,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,61,85,105,10
+    CONTROL         "Buffer Distance",IDC_RADIOBUFFER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,61,96,87,8
+    CONTROL         " Independent Sides of Streams",IDC_CHECKSIDEOFSTREAM,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,62,106,116,10
+    PUSHBUTTON      "Recalculate Model Structure",IDC_BUTTONRECALC,104,153,
+                    95,18
+    CONTROL         "Route Channel Water",IDC_CHECKROUTECHANNEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,154,91,8
+    CONTROL         "Route Channel Solutes",IDC_CHECKROUTECHANSOLUTES,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,162,90,9
+END
+
+IDD_PROPPAGE_TRACERINTERACTION DIALOGEX 0, 0, 216, 183
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Tracer"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,7,7,153,151
+    CONTROL         "Run Tracer Model",IDC_CHECKCL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,14,15,83,12
+    CONTROL         "Time Series",IDC_RADIOCLTIME,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,31,57,80,9
+    CONTROL         "Constant Concentration",IDC_RADIOCLCONSTANT,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,31,67,87,9
+    EDITTEXT        IDC_EDITCLMGL,91,77,28,12,ES_AUTOHSCROLL
+    LTEXT           "Value (mg/l)",IDC_STATIC,47,77,40,9
+    EDITTEXT        IDC_EDITINITSOILCONC,120,44,28,12,ES_AUTOHSCROLL
+    LTEXT           "Initial Concentration in Soil Water (mg/l)",IDC_STATIC,
+                    13,45,105,9
+    CONTROL         "Add to Selected Grid Cells",IDC_CHECKTRACERSOURCE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,108,129,10
+    LISTBOX         IDC_LISTCHOSENCELLS,43,124,98,28,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_RAINFALLPLOT DIALOG  0, 0, 204, 111
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_RAINFALLCHART,
+                    "{92D71E93-25A8-11CF-A640-9986B64D9618}",WS_TABSTOP,7,7,
+                    190,97
+END
+
+IDD_PROPPAGE_SIMULATIONCONTROL DIALOGEX 0, 0, 224, 159
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Simulation Control"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Variable Time Step",IDC_VARIABLETIMESTEP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,9,17,74,11
+    EDITTEXT        IDC_INITIALTIMESTEP,63,31,30,12,ES_AUTOHSCROLL
+    LTEXT           "InitTime Step",IDC_STATIC,11,34,45,12
+    EDITTEXT        IDC_MINIMUMTIMESTEP,63,47,29,12,ES_AUTOHSCROLL
+    LTEXT           "MinTime Step",IDC_STATIC,11,50,47,12
+    EDITTEXT        IDC_MAXIMUMTIMESTEP,63,63,30,12,ES_AUTOHSCROLL
+    LTEXT           "Max Time Step",IDC_STATIC,11,66,49,12
+    EDITTEXT        IDC_ERRORTOLERANCE,63,79,29,12,ES_AUTOHSCROLL
+    LTEXT           "Error Tolerance",IDC_STATIC,11,81,50,12
+    LTEXT           "Stop",IDC_STATIC,9,125,17,8
+    LTEXT           "Start",IDC_STARTTIME,9,108,16,8
+    COMBOBOX        IDC_MODELSTARTTIME,26,106,88,62,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_MODELSTOPTIME,25,124,88,61,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LISTBOX         IDC_CELLLIST,165,41,34,64,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Select All",IDC_SELECTALLCELLS,167,109,34,11
+    PUSHBUTTON      "Remove",IDC_REMOVECELLS,167,122,34,10
+    LISTBOX         IDC_REACHLIST,120,41,34,64,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Select All",IDC_SELECTALLREACHES,121,110,34,11
+    PUSHBUTTON      "Remove",IDC_REMOVEREACHES,122,122,34,10
+    CONTROL         "Sample Cells",IDC_SAMPLECELLS,"Button",BS_AUTOCHECKBOX | 
+                    BS_VCENTER | BS_MULTILINE | WS_TABSTOP,161,21,39,15
+    CONTROL         "Sample Reaches",IDC_SAMPLEREACHES,"Button",
+                    BS_AUTOCHECKBOX | BS_VCENTER | BS_MULTILINE | WS_TABSTOP,
+                    120,17,42,21
+    GROUPBOX        "",IDC_STATIC,117,7,88,135
+    GROUPBOX        "",IDC_STATIC,7,7,93,89
+    GROUPBOX        "",IDC_STATIC,7,98,109,43
+END
+
+IDD_PROPPAGE_SEDIMENT DIALOG  0, 0, 237, 197
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Sediment"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The potential for erosion is calculated for each cell in the landscape.  WET_Prep uses a simple version of the Universal Soil Loss Equation to make these calculations.",
+                    IDC_STATIC,15,13,195,25
+    LTEXT           "ErosionPotential (tonnes/ha) = Qp*Qav * K * LS * C * P",
+                    IDC_STATIC,13,41,162,9
+    LTEXT           "Where Qp = Peak Runoff",IDC_STATIC,13,51,83,8
+    LTEXT           "            Qp = Average Runoff",IDC_STATIC,13,60,98,8
+    LTEXT           "            K = Erosivity",IDC_STATIC,13,69,98,8
+    LTEXT           "       LS = Length Slope - Function of slope and area",
+                    IDC_STATIC,23,78,166,8
+    LTEXT           "C = Landuse Practice",IDC_STATIC,37,88,98,8
+    LTEXT           "P = Erosion Control Practices",IDC_STATIC,38,97,98,8
+    CONTROL         "Run Sediment Model",IDC_CHECKUPLANDSEDIMENT,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,121,163,10
+    EDITTEXT        IDC_REDUCESEDIMENTPER,115,153,26,12,ES_AUTOHSCROLL
+    CONTROL         "Apply Restoration Options related to Erosion Control",
+                    IDC_APPLYSEDOPTIONS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,144,184,8
+    GROUPBOX        "Restoration",IDC_STATIC,13,134,217,56
+    LTEXT           "Buffer Reduction Percent",IDC_STATIC,18,155,84,8
+    EDITTEXT        IDC_EDITBUFFERWIDTH,116,170,25,10,ES_AUTOHSCROLL
+    LTEXT           "Assumed width of Buffers (m)",IDC_STATIC,17,170,97,10
+END
+
+IDD_PROPPAGE_ET DIALOG  0, 0, 210, 154
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Evapotranspiration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "View Parameters",IDC_BUTTONVIEWPARAM,114,131,81,16
+    GROUPBOX        "",IDC_STATIC,16,48,138,58
+    CONTROL         "Hargreaves",IDC_RADIOHAR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,28,62,90,12
+    CONTROL         "Penman-Monthieth",IDC_RADIOPM,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,25,85,93,14
+    CONTROL         "Simulate ET",IDC_CHECKSIMET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,19,23,132,12
+END
+
+IDD_PROPPAGE_LANDUSECHANGE DIALOG  0, 0, 245, 196
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Wetlands and Drain Tiles"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The addition of Wetland areas reduces local slope and hydraulic conductivity. ",
+                    IDC_STATIC,18,23,205,19
+    CONTROL         "Simulate Wetland Restoration",IDC_CHECKMODELWETLANDS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,93,46,119,9
+    GROUPBOX        "Wetlands Simulation",IDC_STATIC,7,7,231,62
+    GROUPBOX        "Tile Drainage",IDC_STATIC,7,76,231,103
+    LTEXT           "Explicit simulation of Tile Drainage is accomplished through the inclusion of an additional flowpath.  This flowpath is active under relatively wet conditions.  Currently the model assumes all agricultural landuses include tile drainages.",
+                    IDC_STATIC,13,86,225,33
+    CONTROL         "Include a Tile Drain Flowpath",IDC_CHECKMODELTILEDRAINS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,118,118,120,10
+    EDITTEXT        IDC_EDITTILETHRESH,23,142,31,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDITTILEOUTFLOW,24,157,31,12,ES_AUTOHSCROLL
+    LTEXT           "Threshold (mm SatDef) when tile drains 'turn on'",
+                    IDC_STATIC,58,145,174,10
+    LTEXT           "Outflow Coefficient (kinda like Ksat)",IDC_STATIC,60,
+                    159,172,8
+END
+
+IDD_ETPARAMPMDLG DIALOGEX 0, 0, 356, 279
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Penman Montieth Parameters"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,299,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,299,24,50,14
+    GROUPBOX        "Incoming Short Wave Radiation",IDC_STATIC,7,7,151,99
+    GROUPBOX        "Incoming Long Wave Radiation",IDC_STATIC,169,7,124,55
+    GROUPBOX        "Energy Budget",IDC_STATIC,7,110,153,78
+    GROUPBOX        "Vapor Pressure Deficit",IDC_STATIC,167,90,182,84
+    GROUPBOX        "Aerodynamic Resistance",IDC_STATIC,7,192,156,80
+    GROUPBOX        "Stomatal Resistance",IDC_STATIC,169,197,180,75
+    LTEXT           "latent heat evap (Mj/kg)",IDC_STATIC,9,16,112,8
+    EDITTEXT        IDC_ETR,124,27,32,12,ES_AUTOHSCROLL
+    LTEXT           "extra terrestrial radiation at surface",IDC_STATIC,8,28,
+                    110,8
+    EDITTEXT        IDC_FRRADCLOUD,124,39,32,12,ES_AUTOHSCROLL
+    LTEXT           "fraction radiation on overcast days",IDC_STATIC,9,38,
+                    112,8
+    EDITTEXT        IDC_FRARACLEAR,124,51,32,12,ES_AUTOHSCROLL
+    LTEXT           "fraction radiation on clear days",IDC_STATIC,9,49,114,8
+    EDITTEXT        IDC_HOURBRIGHT,125,62,32,12,ES_AUTOHSCROLL
+    LTEXT           "hours of bright sun",IDC_STATIC,9,62,115,8
+    EDITTEXT        IDC_HOURDAY,125,73,32,12,ES_AUTOHSCROLL
+    LTEXT           "hours of daylight",IDC_STATIC,9,74,116,8
+    EDITTEXT        IDC_INCSHORT,125,85,32,12,ES_AUTOHSCROLL
+    LTEXT           "total incoming shortwave radiation",IDC_STATIC,9,85,111,
+                    8
+    LTEXT           "albedo - in LULC.dat",IDC_STATIC,10,95,111,8
+    EDITTEXT        IDC_LHE,124,15,32,12,ES_AUTOHSCROLL
+    LTEXT           "ac",IDC_STATIC,173,18,67,8
+    LTEXT           "bc",IDC_STATIC,173,32,67,8
+    LTEXT           "S.B. Constant (mj/m2/k4d)",IDC_STATIC,171,46,86,8
+    EDITTEXT        IDC_AC,257,17,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BC,258,31,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SBC,259,46,32,12,ES_AUTOHSCROLL
+    LTEXT           "saturated vapor pressure",IDC_STATIC,179,111,93,8
+    LTEXT           "specific heat moist air (kj/kg C)",IDC_STATIC,14,166,
+                    100,8
+    LTEXT           "gradient",IDC_STATIC,179,123,70,8
+    LTEXT           "density air (20 C)",IDC_STATIC,16,155,62,8
+    LTEXT           "psychrometric constant",IDC_STATIC,181,135,90,8
+    EDITTEXT        IDC_AIRDEN,124,156,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GRADSATVAPP,289,123,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PSYCH,289,135,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SPEHEAT,125,167,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SATVAPP,289,111,32,12,ES_AUTOHSCROLL
+    LTEXT           "heat conduction",IDC_STATIC,15,122,73,8
+    LTEXT           "stored energy",IDC_STATIC,15,134,70,8
+    LTEXT           "biogeochemical absorption",IDC_STATIC,17,146,90,8
+    EDITTEXT        IDC_STOREDE,125,134,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BIOGEOABS,125,146,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEATCOND,125,122,32,12,ES_AUTOHSCROLL
+    LTEXT           "height of windspeed measurement",IDC_STATIC,17,222,109,
+                    8
+    LTEXT           "height of humidity measurement",IDC_STATIC,17,234,107,8
+    LTEXT           "wind speed",IDC_STATIC,19,246,90,8
+    EDITTEXT        IDC_HEIGHTHUM,127,234,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WINDSPEED,127,246,32,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_HEIGHTWIND,127,222,32,12,ES_AUTOHSCROLL
+    LTEXT           "relative humidity",IDC_STATIC,183,150,90,8
+    EDITTEXT        IDC_RH,289,151,32,12,ES_AUTOHSCROLL
+    LTEXT           "crop height - in LULC.dat",IDC_STATIC,15,210,109,8
+    LTEXT           "stomatal resistance - in LULC.dat",IDC_STATIC,176,218,
+                    109,8
+END
+
+IDD_ETPARAMHARDLG DIALOG  0, 0, 222, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Hargreaves Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,165,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,165,24,50,14
+    EDITTEXT        IDC_EDIT1,76,20,37,12,ES_AUTOHSCROLL
+    LTEXT           "Latitude (dd)",IDC_STATIC,15,21,47,8
+    LTEXT           "Wilting Point SWC",IDC_STATIC,13,46,63,11
+    EDITTEXT        IDC_EDIT2,76,43,37,12,ES_AUTOHSCROLL
+    LTEXT           "Field Capacity",IDC_STATIC,14,61,52,11
+    EDITTEXT        IDC_EDIT3,75,60,37,12,ES_AUTOHSCROLL
+    LTEXT           "These boxes serve as reminders that these parameters are part of the model.  They are soil type dependent and are specified in the soils database.",
+                    IDC_STATIC,117,66,98,53
+END
+
+IDD_PROPPAGE_FLOWMOD DIALOG  0, 0, 238, 142
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Flow Modification"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Increases in Late Summer Flows are modeled as additions from Deep Groundwater sources.  Enter a date window and percent flow increase below.  These values will be included for each Reach where ALTERN is equivalent to Increase Late Summer Flows",
+                    IDC_STATIC,14,7,217,38
+    CONTROL         "Increase Late Summer Flows",IDC_CHECKINCRFLOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,54,128,13
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKERBEGIN,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,13,96,35,
+                    12
+    LTEXT           "Begin Date",IDC_STATIC,13,80,44,9
+    LTEXT           "End Date",IDC_STATIC,93,78,43,10
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKEREND,
+                    "SysDateTimePick32",DTS_RIGHTALIGN | WS_TABSTOP,92,96,35,
+                    12
+    EDITTEXT        IDC_EDITPERINCREASE,14,122,26,13,ES_AUTOHSCROLL
+    LTEXT           "Rate Increase (m3/s)",IDC_STATIC,13,113,90,9
+END
+
+IDD_MCPARAM DIALOG  0, 0, 241, 180
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Additional Sampling Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,184,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,184,24,50,14
+    EDITTEXT        IDC_EDITNUMITERAT,59,16,26,13,ES_AUTOHSCROLL
+    LTEXT           "Number of Iterations",IDC_STATIC,18,16,36,15
+    EDITTEXT        IDC_EDITRANDSEED,59,35,26,13,ES_AUTOHSCROLL
+    LTEXT           "Random Seed",IDC_STATIC,17,35,36,15
+    LTEXT           "m",IDC_STATIC,52,102,24,9
+    LTEXT           "kSat",IDC_STATIC,51,120,31,9
+    LTEXT           "Initial Sat",IDC_STATIC,51,86,31,9
+    LTEXT           "n",IDC_STATIC,53,70,31,9
+    LTEXT           "Distribution",IDC_STATIC,91,56,57,8
+    CONTROL         "Check1",IDC_CHECKN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,73,12,8
+    CONTROL         "Check1",IDC_CHECKIS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,87,12,8
+    CONTROL         "Check1",IDC_CHECKM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,104,12,8
+    CONTROL         "Check1",IDC_CHECKKSAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,122,12,8
+    LTEXT           "upslope#",IDC_STATIC,51,133,31,9
+    CONTROL         "Check1",IDC_CHECKUPSLOPE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,35,135,12,8
+    COMBOBOX        IDC_COMBON,91,70,66,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBOIS,91,85,65,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBOM,91,101,66,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBOKSAT,91,116,66,12,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBOUP,90,131,66,12,CBS_DROPDOWN | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "view",IDC_BUTTONN,162,72,19,10
+    PUSHBUTTON      "view",IDC_BUTTONIS,163,86,19,10
+    PUSHBUTTON      "view",IDC_BUTTONM,162,102,19,10
+    PUSHBUTTON      "view",IDC_BUTTONK,164,119,19,10
+    PUSHBUTTON      "view",IDC_BUTTONU,164,134,19,10
+    LTEXT           "kDepth",IDC_STATIC,49,149,31,9
+    CONTROL         "Check1",IDC_CHECKKDEPTH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,33,151,12,8
+    COMBOBOX        IDC_COMBOKDEPTH,90,147,66,12,CBS_DROPDOWN | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "view",IDC_BUTTONKDEPTH,164,150,19,10
+    LTEXT           "Porosity",IDC_STATIC,50,161,31,9
+    CONTROL         "Check1",IDC_CHECKPOROSITY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,34,162,12,8
+    COMBOBOX        IDC_COMBOPOROSITY,91,161,66,12,CBS_DROPDOWN | 
+                    CBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "view",IDC_BUTTONPOROSITY,165,162,19,10
+END
+
+IDD_DIALOGUNIFPARAM DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Uniform Distribution"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    EDITTEXT        IDC_NMIN,23,40,26,12,ES_AUTOHSCROLL
+    LTEXT           "Min",IDC_STATIC,27,30,26,8
+    EDITTEXT        IDC_NMAX,58,40,26,12,ES_AUTOHSCROLL
+    LTEXT           "Max",IDC_STATIC,58,29,26,8
+END
+
+IDD_LOGNORMPARAM DIALOG  0, 0, 186, 95
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Log Normal (and Normal) Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    EDITTEXT        IDC_EDIT1,13,49,23,10,ES_AUTOHSCROLL
+    LTEXT           "mean",IDC_STATIC,13,37,21,8
+    EDITTEXT        IDC_EDIT2,54,49,23,10,ES_AUTOHSCROLL
+    LTEXT           "std",IDC_STATIC,54,38,24,8
+END
+
+IDD_PPUSERINTERACTIONPESTICIDE DIALOGEX 0, 0, 239, 233
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pesticide Model"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Run Pesticide Model",IDC_CHECKPESTICIDE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,10,93,11
+    EDITTEXT        IDC_EDITPESTAPPDATA,20,84,132,12,ES_AUTOHSCROLL
+    LTEXT           "Pesticide Database (xls)",IDC_STATIC,20,73,105,8
+    PUSHBUTTON      "Open",IDC_BUTTON1,157,85,25,10
+    LTEXT           "Check Pesticides of interest",IDC_STATIC,21,98,108,8
+    LISTBOX         IDC_LISTCHEMICAL,21,108,132,94,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | LBS_NOSEL | 
+                    WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
+    LTEXT           "Note:  The pesticide model requires explicit simulation of the unsaturated zone.",
+                    IDC_STATIC,19,205,162,18
+END
+
+IDD_PROPPAGE_VERTICAL DIALOGEX 0, 0, 330, 249
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | DS_CENTER | WS_CHILD | 
+    WS_DISABLED | WS_CAPTION
+CAPTION "Rate Equations"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Interception/ThroughFall",IDC_STATIC,7,15,155,41
+    CONTROL         "Simulate Interception",IDC_CHECKINTERCEPTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,37,31,121,8
+    GROUPBOX        "Evapotranspiration",IDC_STATIC,7,66,153,52
+    GROUPBOX        "Unsaturated Zone (Vertical Drainage Rate)",IDC_STATIC,7,
+                    129,153,49
+    CONTROL         "Hargreaves",IDC_RADIOHARGREAVES,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,35,76,58,8
+    CONTROL         "Penman",IDC_RADIOPEN,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,35,85,95,8
+    CONTROL         "Penman-Montieth",IDC_RADIOPENMON,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,35,94,95,8
+    CONTROL         "Measured Values",IDC_RADIOMEAS,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,35,104,84,8
+    GROUPBOX        "Saturated Zone (Horizontal Drainage Rate)",IDC_STATIC,7,
+                    183,155,49
+    CONTROL         "Simulate Unsaturated Zone Processes",IDC_CHECKUNSAT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,142,137,10
+    CONTROL         "Van Genucten",IDC_RADIOVANGEN,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,39,155,61,10
+    CONTROL         "Brooks Corey",IDC_RADIOSEIMC,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,40,165,59,10
+    CONTROL         "Simulate ET",IDC_CHECKET,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,107,76,50,8
+    CONTROL         "Exponential",IDC_RADIOSTOPMODEL,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,15,196,124,8
+    CONTROL         "Linear",IDC_RADIOSSEIMC,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,15,207,141,8
+    CONTROL         "Power Law",IDC_RADIOSPOWERLAW,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,16,217,141,8
+    GROUPBOX        "Drainable Porosity",IDC_STATIC,176,17,137,38
+    CONTROL         "Constant",IDC_RADIOPOROSITYCON,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,187,31,47,8
+    CONTROL         "Exponential Decline",IDC_RADIOPOROSITYEXP,"Button",
+                    BS_AUTORADIOBUTTON,187,41,92,9
+    GROUPBOX        "Snow",IDC_STATIC,176,66,137,52
+    CONTROL         "Temp. Index Snow Model (HBV)",IDC_CHECKSNOW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,182,87,121,8
+    GROUPBOX        "Meteorological Data",IDC_STATIC,175,127,137,52
+    CONTROL         "Gridded Air Temp",IDC_CHECKGRIDMET,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,181,148,121,8
+END
+
+IDD_PROPPAGE_HORIZONTAL DIALOGEX 0, 0, 308, 244
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Discretize and Connect Upland Units"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Parameterize Boxes",IDC_STATIC,14,10,269,67
+    CONTROL         "Spatially Invariant",IDC_RADIO9,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,19,22,74,10
+    CONTROL         "Hillslope/Riparian",IDC_RADIO10,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,19,36,70,10
+    CONTROL         "Geomorphologic Mapping",IDC_RADIO11,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,19,50,95,10
+    GROUPBOX        "Allocate Boxes",IDC_STATIC,7,90,271,147
+    GROUPBOX        "",IDC_STATIC,17,149,241,63
+    EDITTEXT        IDC_EDITNUMBANDS,143,183,39,12,ES_AUTOHSCROLL
+    CONTROL         "Independent Sides of Streams",IDC_CHECKSIDEOFSTREAM,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,23,198,113,10
+    LTEXT           "Number of Bands in each watershed",IDC_STATICNUMBANDS,
+                    23,185,116,8
+    CONTROL         "Semi-Distributed",IDC_RADIOSEMI,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,21,102,66,9
+    CONTROL         "Riparian/Hillsope",IDC_RADIOHILLRIP,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,19,114,70,9
+    CONTROL         "Centroid Distance",IDC_RADIOCENTROID,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,21,157,74,11
+    CONTROL         "Buffer Distance",IDC_RADIOBUFFER,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,22,174,71,8
+    CONTROL         "Geomorph",IDC_RADIOGEOMOR,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,24,128,105,8
+    CONTROL         "Lumped",IDC_RADIOLUMPED,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,25,143,65,8
+    CONTROL         "FP GRID",IDC_RADIOFPGRID,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,21,215,176,10
+    CONTROL         "Water Table Height",IDC_RADIOWTHEIGHT,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,21,225,176,10
+END
+
+IDD_PROPPAGE_CHANNEL DIALOGEX 0, 0, 285, 195
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Channel Routing Components"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Channel Routing Definition",IDC_STATIC,19,23,232,55
+    CONTROL         "Instantaneous Summation",IDC_RADIO1,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,33,42,136,11
+    CONTROL         "Kinematic Wave (Chow et. al, 1998)",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,33,55,136,11
+    GROUPBOX        "Routing of additional instream states (pesticide, tracer, sediment, etc)",
+                    IDC_STATIC,18,94,234,60
+    CONTROL         "Average Network Concentration",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,31,108,117,9
+    CONTROL         "Explicit Routing of Pesticides",IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,31,121,126,10
+    CONTROL         "Explict, but maintain independent timestep(Not implemented)",
+                    IDC_RADIO5,"Button",BS_AUTORADIOBUTTON | WS_TABSTOP,32,
+                    134,212,10
+END
+
+IDD_PROPPAGE_PARAMETERVALUES DIALOGEX 0, 0, 358, 270
+STYLE DS_LOCALEDIT | DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | 
+    WS_CAPTION
+CAPTION "Parameter Values"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_EDITLABELS | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,16,15,307,147,
+                    WS_EX_ACCEPTFILES
+    PUSHBUTTON      "<",IDC_BUTTON1,104,242,11,12
+    PUSHBUTTON      ">",IDC_BUTTON2,184,243,12,11
+    LTEXT           "Static",IDC_STATIC3,122,243,52,11
+    PUSHBUTTON      "Reread parameter file",IDC_REREADPARAM,9,242,84,12
+END
+
+IDD_PROPPAGE_EVALUATION DIALOGEX 0, 0, 306, 271
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Evaluation Criteria and Procedures"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "Evaluation Criteria",IDC_STATIC,7,7,130,230
+    GROUPBOX        "Evaluation Procedures",IDC_STATIC,141,7,132,231
+    CONTROL         "Root Mean Square Error",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,30,91,11
+    CONTROL         "Nash-Sutcliffe",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,40,74,11
+    CONTROL         "r2",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,
+                    50,62,11
+    CONTROL         "d",IDC_CHECK5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,
+                    60,71,11
+    CONTROL         "Time-Based Separation (% New Water)",IDC_CHECK6,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,183,85,10
+    CONTROL         "Geographic Source Separation",IDC_CHECK7,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,204,109,11
+    GROUPBOX        "Hydrograph Measures",IDC_STATIC,7,18,124,129
+    GROUPBOX        "Soft Data Measures",IDC_STATIC,7,168,124,62
+    CONTROL         "Upslope/Instream Hysteresis",IDC_CHECK8,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,193,109,11
+    CONTROL         "Mean Residence Time",IDC_CHECK9,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,214,109,11
+    CONTROL         "Single Model Run",IDC_RADIOMONTE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,147,17,105,10
+    GROUPBOX        "Monte Carlo",IDC_STATIC,147,28,118,204
+    CONTROL         "m",IDC_CHECKPARAMM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,72,48,12
+    CONTROL         "Sample Model Structure",IDC_CHECKSTRUC,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,151,49,102,12
+    CONTROL         "Sample Rate Equations",IDC_CHECKEQUATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,62,89,12
+    CONTROL         "kDepth",IDC_CHECKPARAMKD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,168,48,12
+    CONTROL         "initSat",IDC_CHECKPARAMINIT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,177,48,12
+    CONTROL         "Pore Size Distribution",IDC_CHECKPARAMVAN,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,140,99,12
+    CONTROL         "wd",IDC_CHECKPARAMWD,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,230,174,28,12
+    CONTROL         "phi",IDC_CHECKPARAMPHI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,120,48,12
+    CONTROL         "soilDepth",IDC_CHECKPARAMZ,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,93,48,12
+    CONTROL         "thetaTrace",IDC_CHECKPARAMK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,150,52,12
+    CONTROL         "k2",IDC_CHECKPARAMK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,199,48,12
+    CONTROL         "fieldCapacity",IDC_CHECKPARAMFC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,189,68,12
+    CONTROL         "n",IDC_CHECKPARAMN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,230,185,32,12
+    CONTROL         "kSat",IDC_CHECKPARAMKSAT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,151,83,48,12
+    CONTROL         "Run Monte Carlo Simulation",IDC_RADIO3,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,152,39,105,9
+    CONTROL         "Volume",IDC_CHECK24,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,87,64,11
+    CONTROL         "Peak Discharge",IDC_CHECK25,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,96,81,11
+    CONTROL         "Minimum Discharge",IDC_CHECK26,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,16,104,80,11
+    EDITTEXT        IDC_EDITNUMITER,199,215,35,12,ES_AUTOHSCROLL
+    LTEXT           "Number of Iterations",IDC_STATICNUMITER,153,214,43,18
+    CONTROL         "Separate Driven/Non-Driven",IDC_CHECK27,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,128,109,11
+    CONTROL         "thetaResidual",IDC_CHECKPARAMWP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,130,85,12
+    CONTROL         "Power Law Exponent",IDC_CHECKPLE2,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,151,104,80,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "wet_h MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "wet_h"
+            VALUE "LegalCopyright", "Copyright (C) 2001"
+            VALUE "OriginalFilename", "wet_h.EXE"
+            VALUE "ProductName", "wet_h Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CELLPROPERTIES1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 156
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 285
+    END
+
+    IDD_MAPLAYERPROPS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 295
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_SAVERESULTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_OPTIMIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 13
+        RIGHTMARGIN, 622
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 395
+    END
+
+    IDD_3DCHART, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 522
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 304
+    END
+
+    IDD_PROPPAGE_MODELINTERACTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 216
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_ClassifyLayerDlg, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 248
+    END
+
+    IDD_PROPPAGE_INTERFACEINTERACTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_PROPPAGE_MODELSTRUCTURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_PROPPAGE_TRACERINTERACTION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 176
+    END
+
+    IDD_RAINFALLPLOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 197
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_PROPPAGE_SIMULATIONCONTROL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 152
+    END
+
+    IDD_PROPPAGE_SEDIMENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 190
+    END
+
+    IDD_PROPPAGE_ET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_PROPPAGE_LANDUSECHANGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_ETPARAMPMDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 349
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 272
+    END
+
+    IDD_ETPARAMHARDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 215
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_PROPPAGE_FLOWMOD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 231
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_MCPARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_DIALOGUNIFPARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_LOGNORMPARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 88
+    END
+
+    IDD_PPUSERINTERACTIONPESTICIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+
+    IDD_PROPPAGE_VERTICAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 323
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_PROPPAGE_HORIZONTAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 237
+    END
+
+    IDD_PROPPAGE_CHANNEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_PROPPAGE_PARAMETERVALUES, DIALOG
+    BEGIN
+        RIGHTMARGIN, 351
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+        HORZGUIDE, 263
+    END
+
+    IDD_PROPPAGE_EVALUATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 264
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_ClassifyLayerDlg DLGINIT
+BEGIN
+    IDC_COLORRAMP, 0x403, 1, 0
+"\000" 
+    0
+END
+
+IDD_OPTIMIZE DLGINIT
+BEGIN
+    IDC_2DCHART, 0x37a, 1378, 0
+0x0020, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0036, 0x0020, 0x004b, 0x004c, 0x0020, 0x0047, 0x0072, 0x006f, 
+0x0075, 0x0070, 0x0020, 0x0049, 0x006e, 0x0063, 0x002e, 0x0012, 0x0000, 
+0x0001, 0x0000, 0x000a, 0x0000, 0x0015, 0x0000, 0x0000, 0x0000, 0x0005, 
+0x0004, 0x4b0b, 0x5f4c, 0x4843, 0x5241, 0x2e54, 0x4432, 0x5a8a, 0x0000, 
+0x1eb2, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0004, 0x0000, 0x0002, 
+0x00ff, 0x0000, 0x0001, 0x0000, 0x0002, 0x00ff, 0x0000, 0x0004, 0x00ff, 
+0x00ff, 0x0007, 0x0000, 0x0002, 0xb4d2, 0x008c, 0x0001, 0x0000, 0x0002, 
+0xb4d2, 0x008c, 0x0003, 0xff00, 0x0000, 0x0007, 0x0000, 0x0002, 0xff32, 
+0x0000, 0x0001, 0x0000, 0x0002, 0xff32, 0x0000, 0x0002, 0x0000, 0x00cd, 
+0x0007, 0x0000, 0x0002, 0xd148, 0x00cc, 0x0001, 0x0000, 0x0002, 0xd148, 
+0x00cc, 0x0005, 0x00ff, 0x0000, 0x0007, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0001, 0x0100, 0xa000, 0xebc8, 0xf385, 0xe1cc, 0x047f, 0x0000, 
+0x0500, 0x0000, 0x0000, 0x0000, 0x0000, 0xf000, 0x003f, 0x0000, 0x0000, 
+0x3400, 0x0040, 0x0000, 0x0000, 0x2000, 0x0040, 0x0000, 0x0000, 0x2400, 
+0x0040, 0x0000, 0x0000, 0x3000, 0x0040, 0x0000, 0x0000, 0x0000, 0x0040, 
+0x0000, 0x0000, 0x3600, 0x0040, 0x0000, 0x0000, 0x2800, 0x0040, 0x0000, 
+0x0000, 0x3000, 0x0040, 0x0000, 0x0000, 0x3300, 0x0040, 0x0000, 0x0000, 
+0x0800, 0x0040, 0x0000, 0x0000, 0x3300, 0x0040, 0x0000, 0x0000, 0x2400, 
+0x0040, 0x0000, 0x0000, 0x3100, 0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 
+0x0000, 0x0000, 0x1000, 0x0040, 0x0000, 0x0000, 0x3800, 0x0040, 0x0000, 
+0x0000, 0x2800, 0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 0x0000, 0x0000, 
+0x3600, 0x0040, 0x0000, 0x0000, 0x1400, 0x0040, 0x0000, 0x0000, 0x3900, 
+0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 0x0000, 0x0000, 0x3700, 0x0040, 
+0x0000, 0x0000, 0x3200, 0x0140, 0x0100, 0x0100, 0x0100, 0x0100, 0x0100, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0100, 0xa000, 0xebc8, 
+0xf385, 0xe1cc, 0x007f, 0x0000, 0x0100, 0x0200, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0xff00, 
+0xffff, 0xffff, 0xffff, 0x00ff, 0x0001, 0xb600, 0x0001, 0x0100, 0x0002, 
+0x0000, 0x0001, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0190, 0x0000, 0x0301, 0x0000, 0x0200, 0x0000, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x01b6, 0x0000, 0x2501, 
+0x0001, 0x0100, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0003, 0x0000, 0x0002, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x035d, 0x0000, 0x9201, 
+0x0000, 0x0100, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0001, 0x0001, 0x0000, 0x0002, 
+0x0000, 0xffff, 0x00ff, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0002, 0x0000, 0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 
+0x0026, 0x0000, 0x0e01, 0x0000, 0x0100, 0x0320, 0x0000, 0x0d01, 0x0001, 
+0x0100, 0x0000, 0x0000, 0x0032, 0x0000, 0x0200, 0xff00, 0x00ff, 0x0300, 
+0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0xff00, 0xffff, 0xffff, 0xffff, 
+0x00ff, 0x0001, 0x1100, 0x0000, 0x0100, 0x0025, 0x0000, 0x2001, 0x0000, 
+0x0100, 0x000f, 0x0000, 0x0001, 0x0003, 0x0000, 0x0000, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x4014, 0x0001, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x4014, 0x0001, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x3fe0, 0x0001, 0x0000, 0x0100, 
+0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x3ff0, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0004, 0x0000, 0x0000, 0x0001, 0x0000, 0x0801, 
+0x4825, 0x253a, 0x3a4d, 0x5325, 0x0101, 0x0000, 0x0000, 0x4000, 0xd8f8, 
+0x0040, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0190, 0x0000, 0x0001, 0x0100, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x4020, 0x0001, 0x0000, 0x0000, 0x3900, 0x0140, 0x0000, 0x0000, 0x0000, 
+0x4014, 0x0001, 0x0000, 0x0000, 0x3900, 0x0140, 0x0000, 0x0000, 0x0000, 
+0x4014, 0x0001, 0x0000, 0x0000, 0x0400, 0x0140, 0x0000, 0x0000, 0x0001, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x1400, 0x0140, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0400, 0x0000, 0x0000, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x8000, 0x4056, 0x0001, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0190, 0x0000, 0x0001, 0x0100, 0x0100, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0xa000, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0xa001, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0xa001, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0x0001, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0000, 0x8000, 0x4056, 0x0001, 0x4105, 0x6972, 
+0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0190, 0x0000, 
+0x0001, 0x0100, 0x0100, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0005, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0x0100, 0x0001, 0x0005, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001, 
+0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0100, 0x0002, 0x0101, 
+0x0000, 0x0000, 0x0101, 0x0100, 0x0100, 
+    0
+END
+
+IDD_3DCHART DLGINIT
+BEGIN
+    IDC_3DCHART, 0x376, 3934, 0
+0x0020, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0036, 0x0020, 0x004b, 0x004c, 0x0020, 0x0047, 0x0072, 0x006f, 
+0x0075, 0x0070, 0x0020, 0x0049, 0x006e, 0x0063, 0x002e, 0x0000, 0x0005, 
+0x0003, 0x4b0b, 0x5f4c, 0x4843, 0x5241, 0x2e54, 0x4433, 0x46b2, 0x0000, 
+0x31eb, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0xffff, 0xffff, 0x0000, 
+0x0000, 0x0000, 0x4059, 0x0000, 0x0000, 0x0000, 0x4059, 0x0000, 0x0002, 
+0x0000, 0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x001e, 0x0000, 
+0x1501, 0x0000, 0x0100, 0x0270, 0x0000, 0xb901, 0x0001, 0x0100, 0x0003, 
+0x0000, 0x000d, 0x0050, 0x0000, 0x000d, 0x0050, 0x0000, 0x8900, 0x6041, 
+0xd0e5, 0xf922, 0x013f, 0x4188, 0xe560, 0x22d0, 0x4009, 0x0001, 0x0000, 
+0x0000, 0x0100, 0x0001, 0x000d, 0x0050, 0x0000, 0x000d, 0x0050, 0x0000, 
+0x8900, 0x6041, 0xd0e5, 0xf922, 0x013f, 0x4188, 0xe560, 0x22d0, 0x4009, 
+0x0001, 0x0000, 0x0000, 0x0100, 0x0001, 0x000d, 0x0050, 0x0000, 0x000d, 
+0x0050, 0x0000, 0x6500, 0x8aa8, 0xf4a9, 0xc413, 0x013f, 0xdd44, 0x2007, 
+0x89b5, 0x3ffb, 0x0001, 0x0000, 0x0000, 0x0100, 0x0001, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x4054, 0x0000, 0x0000, 0x0000, 0x4054, 0x0100, 0x0101, 0x0000, 0x0100, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x3ff0, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x4004, 
+0x0000, 0x0000, 0x8000, 0x4046, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x8000, 0x4046, 0x0000, 0x0002, 0x0000, 0xffff, 0x00ff, 0x0000, 
+0x0000, 0x0100, 0x0000, 0x0001, 0x0000, 0x0001, 0x0100, 0x1400, 0x0000, 
+0x1400, 0x0000, 0xa000, 0xebc8, 0xf385, 0xe1cc, 0xb67f, 0x1b29, 0xcadc, 
+0xb52a, 0xb63f, 0x1b29, 0xcadc, 0xb52a, 0x893f, 0x6041, 0xd0e5, 0xf922, 
+0x893f, 0x6041, 0xd0e5, 0xf922, 0x2b3f, 0x7e13, 0x9fa9, 0xf537, 0x8a3f, 
+0xe1b0, 0x95e9, 0xf6b2, 0x753f, 0x663c, 0x32a0, 0xf7fe, 0x203f, 0x0846, 
+0x368f, 0xf90e, 0x9c3f, 0x6e6d, 0x4f4c, 0xf9d8, 0xf63f, 0x2862, 0xda27, 
+0xfa55, 0xdb3f, 0x3150, 0xdfce, 0xfa84, 0xb83f, 0x9c23, 0xbc16, 0xfa68, 
+0x433f, 0x38c5, 0x137f, 0xfa0a, 0x673f, 0xb6ed, 0xcd0b, 0xf975, 0x403f, 
+0x136a, 0xf727, 0xf8bb, 0x3c3f, 0x1ef7, 0x392e, 0xf7ee, 0x753f, 0x9a02, 
+0x1b08, 0xf71e, 0x793f, 0x0d06, 0x13fd, 0xf65c, 0xf53f, 0x2584, 0x501e, 
+0xf5b6, 0xd53f, 0xcf95, 0x3cf2, 0xf538, 0x983f, 0x154c, 0x4a8c, 0xf4ea, 
+0x523f, 0x1eb8, 0xeb85, 0xf4d1, 0xa83f, 0x31e3, 0x9503, 0xf4f1, 0x293f, 
+0xc322, 0xde2a, 0xf548, 0x893f, 0x2c7b, 0xe87d, 0xf582, 0xca3f, 0x7689, 
+0x5215, 0xf6fe, 0xc23f, 0xa786, 0xca57, 0xf832, 0x133f, 0xa97e, 0x379f, 
+0xf915, 0x3b3f, 0x66e4, 0x01b8, 0xf99f, 0xac3f, 0xd8ad, 0x765f, 0xf9cf, 
+0xea3f, 0xb295, 0x710c, 0xf9ac, 0xc43f, 0xc725, 0xd29d, 0xf941, 0x383f, 
+0x2a84, 0x7b35, 0xf8a0, 0xce3f, 0x1d53, 0x3372, 0xf7dc, 0x7d3f, 0xcdb3, 
+0xe98d, 0xf709, 0x3d3f, 0x07f2, 0xcf03, 0xf63d, 0x273f, 0xbd66, 0xca18, 
+0xf589, 0x943f, 0xed13, 0xa42a, 0xf4fc, 0xc43f, 0x6277, 0x8bd6, 0xf4a1, 
+0xab3f, 0xefb2, 0xe08a, 0xf47f, 0x083f, 0xe8e6, 0x7bf1, 0xf49b, 0xbf3f, 
+0x039a, 0x7304, 0xf4f4, 0x653f, 0x2ce4, 0x69ec, 0xf587, 0x213f, 0x0e02, 
+0x4aa1, 0xf64d, 0x7b3f, 0x9431, 0xed13, 0xf5aa, 0x8b3f, 0x4c1a, 0xf0c3, 
+0xf711, 0x983f, 0xfb69, 0x5657, 0xf81a, 0x933f, 0xb66f, 0x31b9, 0xf8bd, 
+0x263f, 0x9dc7, 0xc1d2, 0xf8fa, 0x423f, 0xe560, 0x22d0, 0xf8db, 0x923f, 
+0xcd74, 0x9be4, 0xf86d, 0xbb3f, 0x73d5, 0xfbd2, 0xf7c6, 0x573f, 0x7d95, 
+0x0457, 0xf6ff, 0xae3f, 0xe147, 0x147a, 0xf62e, 0xd03f, 0x0c0a, 0xdd59, 
+0xf56a, 0x9b3f, 0x1de6, 0xe8a7, 0xf4c8, 0xd63f, 0xa18b, 0x689c, 0xf457, 
+0x373f, 0x8c54, 0x37f3, 0xf421, 0xb13f, 0x1da7, 0x9afe, 0xf42c, 0x413f, 
+0x4a0e, 0x6998, 0xf47b, 0xec3f, 0xbb2f, 0x0f27, 0xf50b, 0xa23f, 0x855d, 
+0x9f94, 0xf5d4, 0x783f, 0xbc7f, 0xad57, 0xf6cc, 0x6c3f, 0xdf26, 0x736c, 
+0xf7e3, 0x8e3f, 0x09e9, 0x3c4b, 0xf5a0, 0x743f, 0x635e, 0xa897, 0xf6de, 
+0x7d3f, 0x0179, 0xd1f6, 0xf7a9, 0x6e3f, 0x8034, 0x40b7, 0xf802, 0xa73f, 
+0x62cb, 0xf362, 0xf7f1, 0x973f, 0xdbca, 0x4e11, 0xf78b, 0xd73f, 0x22fa, 
+0x2da1, 0xf6e7, 0xe13f, 0xacee, 0x76dd, 0xf621, 0xd83f, 0x0ed3, 0x4d7f, 
+0xf556, 0x903f, 0x7731, 0x212d, 0xf49f, 0xa93f, 0x34c1, 0x1f0c, 0xf411, 
+0x5c3f, 0x8ec9, 0x408d, 0xf3bc, 0x7b3f, 0x9431, 0xed13, 0xf3aa, 0xa73f, 
+0xe15c, 0x2e5d, 0xf3e2, 0xc43f, 0xfaeb, 0xbb05, 0xf461, 0x6b3f, 0xa882, 
+0x00fb, 0xf524, 0x203f, 0x89b5, 0xfb93, 0xf61d, 0x1e3f, 0x811b, 0x5d78, 
+0xf73f, 0xc23f, 0x3ffa, 0xf987, 0xf872, 0x723f, 0x8e8a, 0xf2e4, 0xf99f, 
+0x123f, 0xa3c2, 0x238d, 0xf556, 0xec3f, 0xd512, 0x035b, 0xf65b, 0x033f, 
+0xd7b2, 0x3fbb, 0xf6de, 0x5f3f, 0xb146, 0xd2dc, 0xf6ea, 0x843f, 0x6612, 
+0xfeda, 0xf695, 0xcd3f, 0x8201, 0x7a39, 0xf5fc, 0x913f, 0x7a0f, 0xab36, 
+0xf53e, 0x063f, 0x47d8, 0xaea7, 0xf47c, 0x883f, 0x7746, 0x3b10, 0xf3d3, 
+0xd23f, 0xc6fb, 0x9ed7, 0xf359, 0x713f, 0xf05a, 0xafa2, 0xf320, 0x6d3f, 
+0x9739, 0xaae2, 0xf332, 0x163f, 0xb4f6, 0x5fc3, 0xf393, 0xc63f, 0x0385, 
+0x5921, 0xf440, 0xa93f, 0x379f, 0xa915, 0xf530, 0xdb3f, 0x4b33, 0xd402, 
+0xf654, 0x9e3f, 0x7429, 0x635e, 0xf797, 0x763f, 0xd0a6, 0x8d79, 0xf8dd, 
+0x443f, 0x07dd, 0xb520, 0xfa09, 0x583f, 0x4cad, 0xa5f8, 0xfafe, 0xf83f, 
+0xb26b, 0x3d46, 0xf4c4, 0xdc3f, 0xcf80, 0x230f, 0xf584, 0x933f, 0xb66f, 
+0x31b9, 0xf5bd, 0x113f, 0xbac7, 0x8db8, 0xf586, 0xaa3f, 0x5182, 0x9d49, 
+0xf500, 0x713f, 0xa58f, 0x5d0f, 0xf450, 0xd13f, 0xc13f, 0x8ac5, 0xf39a, 
+0x723f, 0x29dc, 0xac1d, 0xf2ff, 0xef3f, 0xa9e6, 0xb90e, 0xf299, 0x7b3f, 
+0xae14, 0xe147, 0xf27a, 0x5a3f, 0xa012, 0x96a6, 0xf2ad, 0x313f, 0xf6d3, 
+0xacaf, 0xf334, 0x083f, 0x368f, 0x588e, 0xf40b, 0xbe3f, 0x4b87, 0x3b8e, 
+0xf525, 0x1f3f, 0xd480, 0x4e26, 0xf66e, 0x7a3f, 0x29c7, 0x923a, 0xf7cb, 
+0xb03f, 0x9c38, 0xd5f9, 0xf91c, 0xe33f, 0x4dfc, 0x4428, 0xfa40, 0x493f, 
+0x32f4, 0xe58a, 0xfb16, 0x443f, 0x07dd, 0xb520, 0xfb89, 0xf33f, 0x9e59, 
+0x7707, 0xf3e7, 0xe73f, 0x8d3a, 0x54b4, 0xf45e, 0x6b3f, 0x8e9f, 0x0cc7, 
+0xf454, 0xce3f, 0x9ec2, 0xf876, 0xf3eb, 0xe43f, 0x9e83, 0xaacd, 0xf34f, 
+0x9b3f, 0xea20, 0x003e, 0xf2a9, 0x5b3f, 0xbcd3, 0x14e3, 0xf21d, 0x9a3f, 
+0x4ece, 0x4706, 0xf1c9, 0x193f, 0xd773, 0xf212, 0xf1c1, 0xc33f, 0x11f0, 
+0x2531, 0xf212, 0xb23f, 0x6e2e, 0x01a3, 0xf2bc, 0x9b3f, 0x6b8f, 0xc543, 
+0xf3b8, 0x2a3f, 0x7857, 0x8b97, 0xf4f8, 0x8a3f, 0xc7cd, 0xa1b5, 0xf662, 
+0x9f3f, 0x79e5, 0x7770, 0xf7d6, 0x583f, 0x32ca, 0xb1c4, 0xf92e, 0xd93f, 
+0x2b94, 0xcbbc, 0xfa45, 0x233f, 0x6167, 0x3b4f, 0xfafc, 0xe73f, 0x288c, 
+0x0ded, 0xfb3e, 0x9e3f, 0xc1d2, 0x3ffa, 0xfb07, 0xc33f, 0x28f5, 0x8f5c, 
+0xf2c2, 0xbf3f, 0x039a, 0x7304, 0xf2f4, 0xbc3f, 0x5fae, 0x1bb0, 0xf2b6, 
+0xda3f, 0x4855, 0x49f9, 0xf235, 0xa83f, 0xe718, 0x426f, 0xf1a1, 0x863f, 
+0x54c9, 0xa8c1, 0xf124, 0xfe3f, 0x5ef1, 0x32b5, 0xf0e1, 0x3c3f, 0x1ef7, 
+0x392e, 0xf0ee, 0x473f, 0x5e20, 0x2fd7, 0xf158, 0xe23f, 0x7c06, 0x187e, 
+0xf221, 0x1c3f, 0x13d3, 0x7896, 0xf340, 0xde3f, 0xa176, 0x4eb9, 0xf4a3, 
+0xce3f, 0x3736, 0x27a6, 0xf62c, 0xa23f, 0x827f, 0x158b, 0xf7b5, 0x4f3f, 
+0x7acc, 0x9431, 0xf913, 0xc93f, 0x0c1f, 0xf73c, 0xfa1e, 0xba3f, 0x234e, 
+0x952d, 0xfab7, 0xaf3f, 0xe425, 0x9e83, 0xfacd, 0x6a3f, 0x71de, 0x8e8a, 
+0xfa64, 0x343f, 0x9d9d, 0x8e0c, 0xf992, 0x203f, 0xf141, 0xcc63, 0xf15d, 
+0x663f, 0xe4f7, 0xa161, 0xf156, 0x603f, 0x01cd, 0x3982, 0xf0fa, 0xaf3f, 
+0x995a, 0x4bf0, 0xf07d, 0x543f, 0xf38c, 0xa137, 0xf010, 0x653f, 0xe219, 
+0x1758, 0xefb7, 0x8f3f, 0xe5a7, 0xae07, 0xeff2, 0xb73f, 0x4e7a, 0xdf7a, 
+0xf078, 0x773f, 0x6ed6, 0xd0bb, 0xf15c, 0xcf3f, 0x53f7, 0xa5e3, 0xf29b, 
+0x1d3f, 0x4d55, 0x7510, 0xf41f, 0xd83f, 0x8d64, 0x887a, 0xf5c6, 0x133f, 
+0xf449, 0x8a32, 0xf765, 0x223f, 0xdd1a, 0xec41, 0xf8cc, 0xff3f, 0x7bb2, 
+0xb0f2, 0xf9d0, 0x6f3f, 0x3847, 0x782d, 0xfa51, 0xc13f, 0xbbad, 0xaa79, 
+0xfa43, 0x513f, 0x1bda, 0x617c, 0xf9b2, 0xe93f, 0x95d4, 0xf2cf, 0xf8bc, 
+0x1c3f, 0xfcce, 0x0e6a, 0xf790, 0x563f, 0x3d29, 0x4bd3, 0xef8c, 0x433f, 
+0xe4c9, 0xced4, 0xef30, 0x4a3f, 0x86f0, 0x2a34, 0xee70, 0xb13f, 0x7b6b, 
+0x25bb, 0xedb9, 0xe73f, 0xc753, 0xa52a, 0xed67, 0x2d3f, 0x32b1, 0xf91a, 
+0xedbc, 0x483f, 0x43a6, 0xe7a7, 0xeedd, 0x283f, 0x58b8, 0x8351, 0xf069, 
+0xa33f, 0xd306, 0x7c30, 0xf1c4, 0xf23f, 0xcf41, 0xd566, 0xf367, 0xe73f, 
+0x7635, 0xea89, 0xf52d, 0x2e3f, 0xa090, 0x31f8, 0xf6e6, 0xeb3f, 0x36e2, 
+0xc01a, 0xf85b, 0x573f, 0x49cf, 0x1bef, 0xf95f, 0x1b3f, 0xc62a, 0x9bf9, 
+0xf9d0, 0xb83f, 0x03af, 0x8ce7, 0xf9a8, 0x0c3f, 0x8fb0, 0x5d4e, 0xf8f9, 
+0xb43f, 0xc193, 0xf251, 0xf7ea, 0xa83f, 0xca57, 0xc432, 0xf6b1, 0x153f, 
+0x646f, 0xf91e, 0xf583, 0xa83f, 0xacff, 0xf1f9, 0xec17, 0x213f, 0x27e5, 
+0x3ed5, 0xeb9d, 0x953f, 0x3d9a, 0x0ad0, 0xeb0c, 0x733f, 0x12d7, 0x41f2, 
+0xeacf, 0x243f, 0x819d, 0x9791, 0xeb35, 0x043f, 0x2839, 0xa661, 0xec6d, 
+0x403f, 0x16df, 0xd52c, 0xee85, 0x833f, 0xcac0, 0x45a1, 0xf0b6, 0x483f, 
+0x60fe, 0xb9e0, 0xf277, 0xe73f, 0x8d3a, 0x54b4, 0xf45e, 0xdb3f, 0xe685, 
+0x8d3a, 0xf634, 0x723f, 0xc250, 0xdb4c, 0xf7bf, 0xea3f, 0xe65b, 0x5974, 
+0xf8cc, 0x7e3f, 0x5200, 0x389b, 0xf939, 0x363f, 0x8976, 0xadea, 0xf901, 
+0x3b3f, 0x69c2, 0x8bc1, 0xf83e, 0x8e3f, 0xd901, 0xddeb, 0xf71f, 0xe13f, 
+0x147a, 0x47ae, 0xf5e1, 0x593f, 0x5269, 0xba0a, 0xf4bd, 0xd93f, 0x9042, 
+0x1283, 0xf3e6, 0x123f, 0x354c, 0x96b3, 0xe882, 0xa83f, 0xd0aa, 0x2c40, 
+0xe81b, 0xeb3f, 0xdbfc, 0xbf65, 0xe7ee, 0xac3f, 0x3671, 0x011d, 0xe85c, 
+0xbf3f, 0xd349, 0x68a0, 0xe99e, 0xbb3f, 0x8a43, 0x1201, 0xebcd, 0x533f, 
+0x27e9, 0xdd9c, 0xeeda, 0x7b3f, 0xc7f7, 0xd57b, 0xf14a, 0x333f, 0x97e1, 
+0x79fa, 0xf353, 0xcc3f, 0xfdb4, 0x2b2b, 0xf54d, 0xd73f, 0xd551, 0x5104, 
+0xf6f7, 0x9c3f, 0x06e1, 0x7e7c, 0xf818, 0xb03f, 0x1ac9, 0x10f5, 0xf88d, 
+0x533f, 0xedd0, 0x8d25, 0xf851, 0x6a3f, 0x74bc, 0x1893, 0xf784, 0x5c3f, 
+0xc28f, 0x28f5, 0xf65c, 0x233f, 0xc615, 0x8216, 0xf51c, 0x4d3f, 0x8c15, 
+0xea4a, 0xf404, 0xb93f, 0x068d, 0x16f0, 0xf348, 0x2c3f, 0x670e, 0x357e, 
+0xf307, 0xcc3f, 0x860d, 0xac3a, 0xe4f0, 0x3b3f, 0x4d01, 0x0d84, 0xe4cf, 
+0x273f, 0xb0c0, 0xf9fc, 0xe536, 0x103f, 0x4695, 0xeccc, 0xe673, 0x293f, 
+0x8f5c, 0xf5c2, 0xe8a8, 0x933f, 0x8c71, 0x8f64, 0xebd0, 0x353f, 0x0b7c, 
+0xc6eb, 0xefbb, 0x453f, 0xa60d, 0xf861, 0xf208, 0xcf3f, 0xd566, 0x6ae7, 
+0xf42b, 0x583f, 0x1bc5, 0x4799, 0xf5fe, 0x533f, 0x0a91, 0x0b63, 0xf741, 
+0x973f, 0x4356, 0x1ee2, 0xf7cb, 0x2b3f, 0x7b35, 0x15a0, 0xf798, 0xd23f, 
+0x458c, 0xd9d3, 0xf6c9, 0x3b3f, 0x35fc, 0xa359, 0xf59e, 0x553f, 0xdc87, 
+0x370c, 0xf460, 0xc03f, 0x6e04, 0xcddd, 0xf353, 0xc93f, 0x8d8e, 0xbc40, 
+0xf2ae, 0x193f, 0xf156, 0xe646, 0xf291, 0x9a3f, 0xe742, 0x7635, 0xf309, 
+0xba3f, 0x1986, 0x4f1a, 0xe184, 0x203f, 0xa9eb, 0x57d5, 0xe1d7, 0xe23f, 
+0x00ea, 0xbb88, 0xe2fa, 0x2c3f, 0x8466, 0x07b7, 0xe521, 0xde3f, 0x3300, 
+0xc1df, 0xe84f, 0x083f, 0x741d, 0x8709, 0xec5e, 0x5e3f, 0x639d, 0xf640, 
+0xf07a, 0x993f, 0xb09e, 0x03c4, 0xf2ca, 0xac3f, 0xa7c5, 0x1800, 0xf4cf, 
+0xa93f, 0x1ade, 0x2ad8, 0xf641, 0x003f, 0x4da9, 0xdc9c, 0xf6ef, 0xc23f, 
+0x0c34, 0x111f, 0xf6d3, 0xcb3f, 0xf7f8, 0x1719, 0xf60e, 0xf73f, 0x4801, 
+0xe26d, 0xf4e4, 0xf03f, 0xc985, 0xc154, 0xf3a8, 0x693f, 0x3b3a, 0x1c19, 
+0xf2a5, 0x343f, 0xce85, 0xec6b, 0xf212, 0x4e3f, 0xabb4, 0xf290, 0xf213, 
+0x8a3f, 0xb0c8, 0x378a, 0xf2b2, 0x383f, 0x9210, 0x4c05, 0xf3e0, 0x223f, 
+0x1455, 0xb2af, 0xdcb6, 0x1c3f, 0x750c, 0xe158, 0xde96, 0x213f, 0xf794, 
+0x3471, 0xe147, 0xb63f, 0xb69d, 0x0446, 0xe463, 0x263f, 0xb435, 0xd801, 
+0xe880, 0x643f, 0x3d96, 0x6c09, 0xed4e, 0xc03f, 0x87e7, 0xc211, 0xf123, 
+0xa53f, 0x432c, 0xeb1c, 0xf362, 0xa73f, 0x9691, 0xdbca, 0xf511, 0xda3f, 
+0xe0c9, 0x7928, 0xf5f5, 0x203f, 0x55ef, 0x132b, 0xf5fe, 0xcb3f, 0x2e9c, 
+0x898b, 0xf54d, 0xce3f, 0x3736, 0x27a6, 0xf42c, 0x893f, 0x7a24, 0xc519, 
+0xf2f2, 0xf83f, 0x9888, 0x4912, 0xf1f4, 0x573f, 0xcb3e, 0xe0f3, 0xf16e, 
+0xbc3f, 0xaa79, 0x6e43, 0xf186, 0x4e3f, 0x91d1, 0xfe5c, 0xf243, 0x673f, 
+0x1b9b, 0x13d3, 0xf396, 0xe33f, 0x0053, 0x678c, 0xf550, 0x123f, 0x52a4, 
+0x68ec, 0xd71c, 0x213f, 0xacc9, 0xe1de, 0xda76, 0x323f, 0xefe9, 0xf0a5, 
+0xe020, 0xc33f, 0x52f3, 0x31b1, 0xe42f, 0x983f, 0x1f14, 0x909f, 0xe91d, 
+0x7c3f, 0x99ed, 0x0125, 0xee6a, 0x6d3f, 0x9739, 0xaae2, 0xf1b2, 0x7b3f, 
+0x6349, 0x8eb4, 0xf3aa, 0x323f, 0xc8c9, 0xd859, 0xf4d3, 0xc23f, 0x73c0, 
+0xe1ef, 0xf512, 0xc03f, 0x5421, 0xd9a9, 0xf483, 0xa93f, 0x00fb, 0x36a4, 
+0xf371, 0x253f, 0x6723, 0x4f61, 0xf23b, 0x923f, 0x183f, 0xee78, 0xf13d, 
+0x913f, 0x4927, 0x4cd7, 0xf0be, 0xdc3f, 0x9bba, 0x3aa7, 0xf0e4, 0x0c3f, 
+0xf73c, 0x2e1e, 0xf1b9, 0x623f, 0x244a, 0xcbd1, 0xf328, 0x543f, 0x4135, 
+0x7dd4, 0xf500, 0x193f, 0xbd90, 0xfdde, 0xf6f1, 0x4d3f, 0x10f9, 0x8d54, 
+0xd25e, 0xaa3f, 0xecd4, 0x5681, 0xd760, 0xdb3f, 0x2413, 0xbbb6, 0xdf07, 
+0x713f, 0xd955, 0x4577, 0xe470, 0xb33f, 0x73ea, 0x15b5, 0xe9fb, 0xe23f, 
+0x95e9, 0x0cb2, 0xef71, 0x353f, 0xba5e, 0x0c49, 0xf202, 0x8c3f, 0x37f3, 
+0x10a1, 0xf381, 0x293f, 0x5b96, 0x0d5a, 0xf409, 0x973f, 0x0f90, 0x367a, 
+0xf3ab, 0xc63f, 0x8216, 0x941c, 0xf2b0, 0xc73f, 0x6b11, 0x29f1, 0xf180, 
+0x8e3f, 0xa53b, 0xf583, 0xf07f, 0x2d3f, 0xcb25, 0x2849, 0xeffd, 0xee3f, 
+0x5c3d, 0xdc72, 0xf029, 0xcb3f, 0xc710, 0xb8ba, 0xf10d, 0x143f, 0x47ae, 
+0x7ae1, 0xf294, 0x2d3f, 0x053e, 0x78c0, 0xf486, 0x3e3f, 0xf0ed, 0x64d7, 
+0xf68d, 0x193f, 0xd773, 0xf212, 0xf841, 0x1f3f, 0x7a31, 0xa16e, 0xcd2b, 
+0x993f, 0x0e62, 0x8e82, 0xd556, 0x443f, 0x4bbe, 0x4ba9, 0xdec6, 0x063f, 
+0xb2d9, 0x5d7c, 0xe506, 0xe13f, 0x3825, 0x81f5, 0xeae4, 0xab3f, 0xa209, 
+0x03ee, 0xf010, 0xc33f, 0xde2a, 0x3cc8, 0xf1f2, 0x113f, 0xd4aa, 0x81ec, 
+0xf2d6, 0x233f, 0xf9db, 0x6a7e, 0xf2bc, 0x2e3f, 0xa090, 0x31f8, 0xf1e6, 
+0xe43f, 0xec2c, 0x8769, 0xf0bf, 0x443f, 0x0e30, 0x1d2e, 0xef73, 0x5f3f, 
+0xf1b2, 0x8b60, 0xee5d, 0x693f, 0x8290, 0x90a7, 0xeeab, 0xc83f, 0x70cd, 
+0x3e03, 0xf03f, 0xf53f, 0x594a, 0x3886, 0xf1d6, 0xc73f, 0x0663, 0xe32a, 
+0xf3df, 0x3b3f, 0x0236, 0xbaf1, 0xf5fe, 0xa63f, 0xde7e, 0xa454, 0xf7c2, 
+0x823f, 0xdee7, 0x25c3, 0xf8c7, 0x873f, 0xaba3, 0x7774, 0xc79d, 0x1f3f, 
+0xa0ba, 0x65be, 0xd44e, 0xbe3f, 0x0df9, 0x0d13, 0xdf52, 0xbf3f, 0x7210, 
+0xffde, 0xe5c7, 0x5c3f, 0x4dc6, 0x340d, 0xeb9f, 0xcd3f, 0xe6af, 0xc100, 
+0xf01c, 0x013f, 0x1cc1, 0x7e3d, 0xf16f, 0x753f, 0x4c59, 0x3e6c, 0xf1ae, 
+0x3e3f, 0xc005, 0x0678, 0xf10d, 0xd93f, 0xfb43, 0xc158, 0xefef, 0xd33f, 
+0xa350, 0x6490, 0xedd6, 0x2e3f, 0xc0c6, 0x8e3a, 0xec9f, 0x383f, 0x10a1, 
+0x8701, 0xecd0, 0x993f, 0xca81, 0xf7f8, 0xee99, 0xce3f, 0xcfaa, 0x56d5, 
+0xf0ec, 0x433f, 0x69ad, 0x71de, 0xf30a, 0x6a3f, 0x0d30, 0x47c3, 0xf544, 
+0x8d3f, 0x3ad1, 0x9aaa, 0xf720, 0x8a3f, 0xb0c8, 0x378a, 0xf832, 0xff3f, 
+0xc95b, 0x8d8e, 0xf840, 0x653f, 0x8aa8, 0xf4a9, 0xc413, 0xe13f, 0x0ab2, 
+0x019b, 0xd42e, 0x0a3f, 0x6649, 0x0ef5, 0xe037, 0xc53f, 0x2174, 0x7f56, 
+0xe684, 0x0f3f, 0x84ba, 0x6f43, 0xebf1, 0x893f, 0xbb27, 0xd199, 0xef8f, 
+0xd93f, 0x11b1, 0xd788, 0xf075, 0xe63f, 0x25ae, 0x83e4, 0xf01e, 0xcf3f, 
+0x5dbf, 0xebf6, 0xee4e, 0x3f3f, 0xc2e3, 0x9081, 0xec2c, 0x2a3f, 0x923a, 
+0x7fcb, 0xeac8, 0x5f3f, 0x28ed, 0x51ce, 0xeac7, 0x7d3f, 0xb05b, 0x1754, 
+0xec70, 0x9a3f, 0x3eb3, 0x98e5, 0xefac, 0xa33f, 0x3a92, 0x4d01, 0xf204, 
+0x413f, 0x1648, 0x8130, 0xf45b, 0x993f, 0x320d, 0xc8c9, 0xf659, 0x103f, 
+0xebaf, 0xec17, 0xf786, 0x893f, 0x6041, 0xd0e5, 0xf7a2, 0x8b3f, 0x014f, 
+0x9e30, 0xf6c1, 0x013f, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 
+0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0xd300, 0xd3d3, 
+0x7000, 0x7070, 0x0a00, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0xffff, 
+0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x0156, 0x0000, 0x0201, 0x0000, 
+0x0100, 0x0000, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0190, 0x0000, 0x0301, 0x0000, 0x0200, 0x0000, 0xff00, 
+0xffff, 0xffff, 0xffff, 0x00ff, 0x0001, 0x5600, 0x0001, 0x0100, 0x01df, 
+0x0000, 0x0001, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0003, 0x0000, 0x0002, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x02a8, 0x0000, 0xef01, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0001, 0x0001, 
+0x0002, 0x0000, 0x0000, 0x0001, 0x0100, 
+    0
+END
+
+IDD_RAINFALLPLOT DLGINIT
+BEGIN
+    IDC_RAINFALLCHART, 0x37a, 1378, 0
+0x0020, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0036, 0x0020, 0x004b, 0x004c, 0x0020, 0x0047, 0x0072, 0x006f, 
+0x0075, 0x0070, 0x0020, 0x0049, 0x006e, 0x0063, 0x002e, 0x0012, 0x0000, 
+0x0001, 0x0000, 0x000a, 0x0000, 0x0015, 0x0000, 0x0000, 0x0000, 0x0005, 
+0x0004, 0x4b0b, 0x5f4c, 0x4843, 0x5241, 0x2e54, 0x4432, 0x1d75, 0x0000, 
+0x1054, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0004, 0x0000, 0x0002, 
+0x00ff, 0x0000, 0x0001, 0x0000, 0x0002, 0x00ff, 0x0000, 0x0004, 0x00ff, 
+0x00ff, 0x0007, 0x0000, 0x0002, 0xb4d2, 0x008c, 0x0001, 0x0000, 0x0002, 
+0xb4d2, 0x008c, 0x0003, 0xff00, 0x0000, 0x0007, 0x0000, 0x0002, 0xff32, 
+0x0000, 0x0001, 0x0000, 0x0002, 0xff32, 0x0000, 0x0002, 0x0000, 0x00cd, 
+0x0007, 0x0000, 0x0002, 0xd148, 0x00cc, 0x0001, 0x0000, 0x0002, 0xd148, 
+0x00cc, 0x0005, 0x00ff, 0x0000, 0x0007, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0001, 0x0100, 0xa000, 0xebc8, 0xf385, 0xe1cc, 0x047f, 0x0000, 
+0x0500, 0x0000, 0x0000, 0x0000, 0x0000, 0xf000, 0x003f, 0x0000, 0x0000, 
+0x3400, 0x0040, 0x0000, 0x0000, 0x2000, 0x0040, 0x0000, 0x0000, 0x2400, 
+0x0040, 0x0000, 0x0000, 0x3000, 0x0040, 0x0000, 0x0000, 0x0000, 0x0040, 
+0x0000, 0x0000, 0x3600, 0x0040, 0x0000, 0x0000, 0x2800, 0x0040, 0x0000, 
+0x0000, 0x3000, 0x0040, 0x0000, 0x0000, 0x3300, 0x0040, 0x0000, 0x0000, 
+0x0800, 0x0040, 0x0000, 0x0000, 0x3300, 0x0040, 0x0000, 0x0000, 0x2400, 
+0x0040, 0x0000, 0x0000, 0x3100, 0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 
+0x0000, 0x0000, 0x1000, 0x0040, 0x0000, 0x0000, 0x3800, 0x0040, 0x0000, 
+0x0000, 0x2800, 0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 0x0000, 0x0000, 
+0x3600, 0x0040, 0x0000, 0x0000, 0x1400, 0x0040, 0x0000, 0x0000, 0x3900, 
+0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 0x0000, 0x0000, 0x3700, 0x0040, 
+0x0000, 0x0000, 0x3200, 0x0140, 0x0100, 0x0100, 0x0100, 0x0200, 0x0100, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0100, 0xa000, 0xebc8, 
+0xf385, 0xe1cc, 0x007f, 0x0000, 0x0100, 0x0200, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0xff00, 
+0xffff, 0xffff, 0xffff, 0x00ff, 0x0001, 0x8e00, 0x0000, 0x0100, 0x0002, 
+0x0000, 0x0001, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0190, 0x0000, 0x0301, 0x0000, 0x0200, 0x0000, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x008e, 0x0000, 0x9a01, 
+0x0000, 0x0100, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0003, 0x0000, 0x0002, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x010e, 0x0000, 0x4d01, 
+0x0000, 0x0100, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0001, 0x0001, 0x0000, 0x0002, 
+0x0000, 0xffff, 0x00ff, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0002, 0x0000, 0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 
+0x000d, 0x0000, 0x0801, 0x0000, 0x0100, 0x0103, 0x0000, 0x8e01, 0x0000, 
+0x0100, 0x0000, 0x0000, 0x0032, 0x0000, 0x0200, 0xff00, 0x00ff, 0x0300, 
+0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0xff00, 0xffff, 0xffff, 0xffff, 
+0x00ff, 0x0001, 0x1100, 0x0000, 0x0100, 0x0025, 0x0000, 0x2001, 0x0000, 
+0x0100, 0x000a, 0x0000, 0x0001, 0x0003, 0x0000, 0x0000, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x4014, 0x0001, 0x0000, 0x0000, 
+0xe000, 0x013f, 0x0000, 0x0000, 0x0000, 0x4016, 0x0001, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x3fe0, 0x0001, 0x0000, 0x0100, 
+0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x3fe0, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0004, 0x0000, 0x0000, 0x0001, 0x0000, 0x0801, 
+0x4825, 0x253a, 0x3a4d, 0x5325, 0x0101, 0x0000, 0x0000, 0x4000, 0xd8f8, 
+0x0040, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0190, 0x0000, 0x0001, 0x0100, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x4020, 0x0001, 0x0000, 0x0000, 0x3900, 0x0140, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0000, 0x4400, 0x0140, 0x0000, 0x0000, 0x0000, 
+0x4034, 0x0001, 0x0000, 0x0000, 0x2400, 0x0140, 0x0000, 0x0000, 0x0001, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0400, 0x0000, 0x0000, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x8000, 0x4056, 0x0001, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0190, 0x0000, 0x0001, 0x0100, 0x0100, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0xa000, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0xa001, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0xa001, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0x0001, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0000, 0x8000, 0x4056, 0x0001, 0x4105, 0x6972, 
+0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0190, 0x0000, 
+0x0001, 0x0100, 0x0100, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0005, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0x0100, 0x0001, 0x0005, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001, 
+0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0100, 0x0002, 0x0101, 
+0x0000, 0x0000, 0x0101, 0x0100, 0x0100, 
+    0
+END
+
+IDD_ABOUTBOX DLGINIT
+BEGIN
+    IDC_CONTROL1, 0x37a, 1378, 0
+0x0020, 0x0000, 0x0043, 0x006f, 0x0070, 0x0079, 0x0072, 0x0069, 0x0067, 
+0x0068, 0x0074, 0x0020, 0x0028, 0x0063, 0x0029, 0x0020, 0x0031, 0x0039, 
+0x0039, 0x0036, 0x0020, 0x004b, 0x004c, 0x0020, 0x0047, 0x0072, 0x006f, 
+0x0075, 0x0070, 0x0020, 0x0049, 0x006e, 0x0063, 0x002e, 0x0012, 0x0000, 
+0x0001, 0x0000, 0x000a, 0x0000, 0x0015, 0x0000, 0x0000, 0x0000, 0x0005, 
+0x0004, 0x4b0b, 0x5f4c, 0x4843, 0x5241, 0x2e54, 0x4432, 0x094d, 0x0000, 
+0x043d, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0004, 0x0000, 0x0002, 
+0x00ff, 0x0000, 0x0001, 0x0000, 0x0002, 0x00ff, 0x0000, 0x0004, 0x00ff, 
+0x00ff, 0x0007, 0x0000, 0x0002, 0xb4d2, 0x008c, 0x0001, 0x0000, 0x0002, 
+0xb4d2, 0x008c, 0x0003, 0xff00, 0x0000, 0x0007, 0x0000, 0x0002, 0xff32, 
+0x0000, 0x0001, 0x0000, 0x0002, 0xff32, 0x0000, 0x0002, 0x0000, 0x00cd, 
+0x0007, 0x0000, 0x0002, 0xd148, 0x00cc, 0x0001, 0x0000, 0x0002, 0xd148, 
+0x00cc, 0x0005, 0x00ff, 0x0000, 0x0007, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0001, 0x0100, 0xa000, 0xebc8, 0xf385, 0xe1cc, 0x047f, 0x0000, 
+0x0500, 0x0000, 0x0000, 0x0000, 0x0000, 0xf000, 0x003f, 0x0000, 0x0000, 
+0x3400, 0x0040, 0x0000, 0x0000, 0x2000, 0x0040, 0x0000, 0x0000, 0x2400, 
+0x0040, 0x0000, 0x0000, 0x3000, 0x0040, 0x0000, 0x0000, 0x0000, 0x0040, 
+0x0000, 0x0000, 0x3600, 0x0040, 0x0000, 0x0000, 0x2800, 0x0040, 0x0000, 
+0x0000, 0x3000, 0x0040, 0x0000, 0x0000, 0x3300, 0x0040, 0x0000, 0x0000, 
+0x0800, 0x0040, 0x0000, 0x0000, 0x3300, 0x0040, 0x0000, 0x0000, 0x2400, 
+0x0040, 0x0000, 0x0000, 0x3100, 0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 
+0x0000, 0x0000, 0x1000, 0x0040, 0x0000, 0x0000, 0x3800, 0x0040, 0x0000, 
+0x0000, 0x2800, 0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 0x0000, 0x0000, 
+0x3600, 0x0040, 0x0000, 0x0000, 0x1400, 0x0040, 0x0000, 0x0000, 0x3900, 
+0x0040, 0x0000, 0x0000, 0x2e00, 0x0040, 0x0000, 0x0000, 0x3700, 0x0040, 
+0x0000, 0x0000, 0x3200, 0x0140, 0x0100, 0x0100, 0x0100, 0x0100, 0x0100, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0100, 0xa000, 0xebc8, 
+0xf385, 0xe1cc, 0x007f, 0x0000, 0x0100, 0x0200, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0xff00, 
+0xffff, 0xffff, 0xffff, 0x00ff, 0x0001, 0x2d00, 0x0000, 0x0100, 0x0002, 
+0x0000, 0x0001, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0190, 0x0000, 0x0301, 0x0000, 0x0200, 0x0000, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x002d, 0x0000, 0x2501, 
+0x0000, 0x0100, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0003, 0x0000, 0x0002, 0x0000, 
+0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 0x004b, 0x0000, 0x1201, 
+0x0000, 0x0100, 0x0500, 0x7241, 0x6169, 0xc06c, 0x01d4, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x9000, 0x0001, 0x0100, 0x0001, 0x0001, 0x0000, 0x0002, 
+0x0000, 0xffff, 0x00ff, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0002, 0x0000, 0xffff, 0xffff, 0xffff, 0xffff, 0x0100, 0x0000, 
+0x0005, 0x0000, 0x0301, 0x0000, 0x0100, 0x0050, 0x0000, 0x2301, 0x0000, 
+0x0100, 0x0000, 0x0000, 0x0032, 0x0000, 0x0200, 0xff00, 0x00ff, 0x0300, 
+0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0100, 0xff00, 0xffff, 0xffff, 0xffff, 
+0x00ff, 0x0001, 0x0b00, 0x0000, 0x0100, 0x000b, 0x0000, 0x0e01, 0x0000, 
+0x0100, 0x000f, 0x0000, 0x0001, 0x0003, 0x0000, 0x0000, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x4014, 0x0001, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x4014, 0x0001, 0x0000, 0x0000, 
+0xf000, 0x013f, 0x0000, 0x0000, 0x0000, 0x3fe0, 0x0001, 0x0000, 0x0100, 
+0x0000, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x3ff0, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0004, 0x0000, 0x0000, 0x0001, 0x0000, 0x0801, 
+0x4825, 0x253a, 0x3a4d, 0x5325, 0x0101, 0x0000, 0x0000, 0x4000, 0xd8f8, 
+0x0040, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0190, 0x0000, 0x0001, 0x0100, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x4020, 0x0001, 0x0000, 0x0000, 0x3900, 0x0140, 0x0000, 0x0000, 0x0000, 
+0x4020, 0x0001, 0x0000, 0x0000, 0x3900, 0x0140, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0100, 0x0000, 0x0000, 0x0001, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x2000, 0x0140, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0400, 0x0000, 0x0000, 0x0100, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x8000, 0x4056, 0x0001, 0x4105, 0x6972, 0x6c61, 0xd4c0, 0x0001, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0190, 0x0000, 0x0001, 0x0100, 0x0100, 
+0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0xa000, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0xa001, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0xa001, 0xebc8, 0xf385, 0xe1cc, 
+0x017f, 0xc8a0, 0x85eb, 0xccf3, 0x7fe1, 0x0001, 0x0000, 0x0100, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0000, 0x8000, 0x4056, 0x0001, 0x4105, 0x6972, 
+0x6c61, 0xd4c0, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0190, 0x0000, 
+0x0001, 0x0100, 0x0100, 0x0000, 0x0100, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0002, 0x0000, 0x0005, 0x0000, 
+0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 
+0x0000, 0x0100, 0x0001, 0x0005, 0x0000, 0x0000, 0x0001, 0x0000, 0x0001, 
+0x0000, 0x0001, 0x0000, 0x0001, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 
+0x0000, 0x0000, 0x0000, 0x0000, 0x0001, 0x0000, 0x0100, 0x0002, 0x0101, 
+0x0000, 0x0000, 0x0101, 0x0100, 0x0100, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "wet_h\n\nWet_h\n\n\nWeth.Document\nWet_h Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "wet_h"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_STATISTICS           "Show Monte Carlo Results"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_STOP             "End the Current Model Run"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\wet_h.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
