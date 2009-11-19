@@ -1,4 +1,0 @@
-"State or Territory"|"OR"|"Oregon"|648386|"10385"|"37388"
-"County or Parish"|"OR005"|"Clackamas"|648368|"10385"|"10782"
-"MLRA"|"2"|"Willamette and Puget Sound Valleys"|413609|"10385"|"10783"
-"MLRA"|"3"|"Olympic and Cascade Mountains"|234759|"10385"|"10784"
